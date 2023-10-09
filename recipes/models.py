@@ -6,6 +6,8 @@ class Recipe(models.Model):
   ingredients =  models.CharField(max_length=255)
   cooking_time = models.IntegerField()
 
+  
+
   DIFFICULTY_CHOICES = [
         ('Easy', 'Easy 😄'),
         ('Medium', 'Medium 😅'),
@@ -13,6 +15,8 @@ class Recipe(models.Model):
         ('Hard', 'Hard 😰'),
     ]
   difficulty = models.CharField(max_length=20, choices=DIFFICULTY_CHOICES)
+
+  pic = models.ImageField(upload_to='recipes', default='no_picture.jpg') 
 
   def __str__(self):
     return f"""
