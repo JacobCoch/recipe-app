@@ -9,7 +9,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'styles/style.css' %}"
+      href="{% static 'styles/login.css' %}"
     />
   </head>
 
@@ -22,20 +22,10 @@
           Please enter your username and password to login. Or just hit login
           for now.
         </p>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          class="username-input"
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          class="password-input"
-        />
-        <form action="/recipe/" method="get">
-          <button type="submit" class="login-button">Go to Recipes</button>
+        {% if error_message %} {{error_message}} {% endif %}
+        <form action="" method="post">
+          {% csrf_token %} {{form}}
+          <button type="submit">Login</button>
         </form>
       </div>
     </div>

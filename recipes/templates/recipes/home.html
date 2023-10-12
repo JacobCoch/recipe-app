@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <head>
   <title>TasteBuds</title>
-  <a href="{%url 'login' %}"> Login </a>
+  {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+  <a href="{%url 'login' %}" class="nav-link link-dark"> Login </a>
   <body>
-    <h1>This is the Home page</h1>
+    <div class="container">
+      <h1></h1>
+    </div>
   </body>
 </head>

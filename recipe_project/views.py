@@ -26,7 +26,7 @@ def login_view(request):
            if user is not None:                    
           #then use pre-defined Django function to login
                login(request, user)                
-               return redirect('recipes:recipes') 
+               return redirect('recipes:home') 
        else:                                               
            error_message ='ooops.. something went wrong'   
 
