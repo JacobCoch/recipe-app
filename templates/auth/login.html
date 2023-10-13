@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+  <head>
+    <title>TasteBuds</title>
+    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/login.css' %}"
+    />
+  </head>
+
+  <body
+    class="background-image d-flex justify-content-center align-items-center"
+  >
+    <div class="container mx-auto" style="max-width: 400px">
+      <h1 class="title">Welcome</h1>
+      <div class="bg-light p-4 rounded">
+        <p class="login-text">Please enter your username and password.</p>
+        {% if error_message %} {{error_message}} {% endif %}
+        <form
+          action=""
+          method="post"
+          type="username"
+          class="form-group mx-auto"
+        >
+          {% csrf_token %}
+
+          <div class="mx-auto">
+            <div style="max-width: 200px; margin: 0 auto">
+              <div class="mb-3 text-dark">
+                {{form.username.label_tag}} {{form.username}}
+              </div>
+            </div>
+            <div style="max-width: 200px; margin: 0 auto">
+              <div class="mb-3 text-dark">
+                {{form.password.label_tag}} {{form.password}}
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary login-btn">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body.background-image {
+  background-image: url(../images/ingredient_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(0, 0, 83);
+}
+
+.login-text {
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 83);
+  text-align: center;
+}
+
+.login-btn {
+  width: 6rem;
+}

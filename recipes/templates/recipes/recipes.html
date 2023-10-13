@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Recipe list</h1>
+    <a href="{%url 'logout' %}"> Logout </a>
+
+    <title>TasteBuds</title>
+    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+  </head>
+
+  <table border="1" cellpadding="5" cellspacing="5">
+    <tr>
+      <td>Recipe Titles</td>
+      <td>Recipe Images</td>
+    </tr>
+    {% for object in object_list %}
+    <tr>
+      <td><a href="{{ object.get_absolute_url }}">{{object.name}}</a></td>
+      <td><img src="{{ object.pic.url }}" width="100" height="100" /></td>
+    </tr>
+    {% endfor %}
+  </table>
+</html>
