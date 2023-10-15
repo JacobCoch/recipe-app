@@ -7,15 +7,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Define arrays for headings, messages, and image sources
   const headings = [
-    'Customize your own pancakes',
     'Welcome to TasteBuds',
+    'Customize your own pancakes',
+    'Master the art of cooking',
     'Unlock the Chef in You',
     // Add more headings as needed
   ];
 
   const messages = [
-    'Create your own delicious recipes and save them in TasteBuds.',
-    'Your personal recipe organizer. Store your recipes in TasteBuds and access them on all your devices, anywhere, anytime.',
+    'Your trusted recipe organizer. Easily store and access your recipes anytime, anywhere!',
+    'Create your own delicious recipes and save them in TasteBuds!',
+    'Elevate your culinary skills, experiment with new recipes, and share your creations with the world!',
     'Discover new flavors, share your culinary creations, and simplify your cooking journey with TasteBuds!',
   ];
 
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     '/media/recipes/brownies.jpg',
     '/media/recipes/cherry_pancakes.jpg',
     '/media/recipes/fruit_cookies.jpg',
+    '/media/recipes/strawberry_cake.jpg',
     // Add more image paths as needed
   ];
 
@@ -30,22 +33,39 @@ document.addEventListener('DOMContentLoaded', function () {
     'beige', // Default background color
     'lightblue', // Background color for the second content/image pair
     'lightgreen',
+    'lightpink',
   ];
 
   // Initialize an index to keep track of the current image
   let currentImageIndex = 0;
 
+  function setInitialContent() {
+    headingElement.textContent = headings[0];
+    messageElement.textContent = messages[0];
+    imageElement.src = imageSources[0];
+  }
+
+  const preloadedImages = [];
+  for (let i = 0; i < imageSources.length; i++) {
+    const img = new Image();
+    img.src = imageSources[i];
+    preloadedImages.push(img);
+  }
+
   nextButton.addEventListener('click', function () {
-    // Change the heading and message based on the current image
+    // Increment the index first
+    currentImageIndex = (currentImageIndex + 1) % imageSources.length; // Cycle through images
+
+    // Change the heading and message based on the new index
     headingElement.textContent = headings[currentImageIndex];
     messageElement.textContent = messages[currentImageIndex];
 
     // Change the image source using the imageSources array
-    currentImageIndex = (currentImageIndex + 1) % imageSources.length; // Cycle through images
-    imageElement.src = imageSources[currentImageIndex];
+    imageElement.src = preloadedImages[currentImageIndex].src;
 
-    // Change the background color (e.g., to a different color)
+    // Change the background color
     contentContainer.style.backgroundColor =
-      backgroundColors[currentImageIndex]; // Change to your desired color
+      backgroundColors[currentImageIndex];
   });
+  setInitialContent();
 });

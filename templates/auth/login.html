@@ -19,9 +19,11 @@
   >
     <div class="container mx-auto" style="max-width: 400px">
       <h1 class="title">Welcome</h1>
-      <div class="bg-light p-4 rounded">
+      <div class="bg-dark p-4 rounded">
         <p class="login-text">Please enter your username and password.</p>
-        {% if error_message %} {{error_message}} {% endif %}
+        {% if error_message %}
+        <p class="error-message">{{ error_message }}</p>
+        {% endif %}
         <form
           action=""
           method="post"

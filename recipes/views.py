@@ -3,8 +3,6 @@ from django.views.generic import DetailView, ListView
 from .models import Recipe
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-def home(request):
-   return render(request, 'recipes/home.html')
 
 class RecipeListView(LoginRequiredMixin,ListView):
   model = Recipe
