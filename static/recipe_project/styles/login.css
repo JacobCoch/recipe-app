@@ -20,6 +20,15 @@ body.background-image {
   color: rgb(0, 0, 83);
   text-align: center;
 }
+@media (max-width: 283px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
+.login-container {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 .login-text {
   font-family: serif;
@@ -27,6 +36,11 @@ body.background-image {
   font-weight: bold;
   color: rgb(255, 255, 255);
   text-align: center;
+}
+@media (max-width: 283px) {
+  .login-text {
+    font-size: 16px;
+  }
 }
 
 .login-btn {

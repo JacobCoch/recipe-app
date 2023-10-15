@@ -4,17 +4,18 @@ from .models import Recipe
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-class RecipeListView(LoginRequiredMixin,ListView):
-  model = Recipe
-  template_name = 'recipes/recipes.html'
+class RecipeListView(LoginRequiredMixin, ListView):
+    model = Recipe
+    template_name = "recipes/recipes.html"
+
 
 class RecipeDetailView(LoginRequiredMixin, DetailView):
-  model = Recipe
-  template_name = 'recipes/detail.html'
+    model = Recipe
+    template_name = "recipes/detail.html"
 
-  def get_context_data(self, **kwargs):
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         recipe = self.object
-        difficulty = recipe.calc_difficulty()  
-        context['difficulty'] = difficulty
+        difficulty = recipe.calc_difficulty()
+        context["difficulty"] = difficulty
         return context
