@@ -14,10 +14,7 @@ def login_view(request):
     # when user hits "login" button, then POST request is generated
     if request.method == "POST":
         # read the data sent by the form via POST request
-        form = AuthenticationForm(data=request.POST,
-            attrs={"class": "form-control"}
-            
-                                  )
+        form = AuthenticationForm(data=request.POST)
 
         # check if form is valid
         if form.is_valid():

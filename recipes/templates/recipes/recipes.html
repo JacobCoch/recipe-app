@@ -27,42 +27,18 @@
       </ul>
     </nav>
 
+    <div>
+      <h1 class="text-center">Welcome to TasteBuds!</h1>
+      <h3 class="text-center">Your one stop shop for all your recipe needs!</h3>
+    </div>
+
     <!-- Carousel -->
-    <div id="recipeCarousel" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        {% for object in object_list %}
-        <div class="carousel-item {% if forloop.first %}active{% endif %}">
-          <img
-            src="{{ object.pic.url }}"
-            alt="{{ object.name }}"
-            class="d-block w-100"
-          />
-          <div class="carousel-caption">
-            <h3>
-              <a href="{{ object.get_absolute_url }}">{{ object.name }}</a>
-            </h3>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      <a
-        class="carousel-control-prev"
-        href="#recipeCarousel"
-        role="button"
-        data-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a
-        class="carousel-control-next"
-        href="#recipeCarousel"
-        role="button"
-        data-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+    <div class="image-container">
+      <img src="/media/recipes/brownies.jpg" alt="image 1" />
+      <img src="/media/recipes/egg_breakfast.jpg" alt="image 2" />
+      <img src="/media/recipes/octopus.jpg" alt="image 3" />
+      <img src="/media/recipes/garlic_noodles.jpg" alt="image 4" />
+      <img src="/media/recipes/french_toast.jpg" alt="image 5" />
     </div>
 
     <!-- Recipe List -->
@@ -95,4 +71,5 @@
       </table>
     </div>
   </body>
+  <script src="{% static 'scripts/recipe.js' %}"></script>
 </html>
