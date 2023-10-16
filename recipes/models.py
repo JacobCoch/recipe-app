@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+import logging
 
 # Create your models here.
 from django.db import models
@@ -22,22 +23,30 @@ class Recipe(models.Model):
 
     def calc_difficulty(self):
         difficulty_levels = {
-            "Easy": "Easy 😄",
-            "Medium": "Medium 😅",
-            "Intermediate": "Intermediate 😓",
-            "Hard": "Hard 😰",
+            "Easy": "Easy",
+            "Medium": "Medium",
+            "Intermediate": "Intermediate",
+            "Hard": "Hard",
         }
 
-        if (self.cooking_time < 10) and (len(self.ingredients) < 4):
-            return difficulty_levels.get("Easy")
-        elif (self.cooking_time < 10) and (len(self.ingredients) >= 4):
-            return difficulty_levels.get("Medium")
-        elif (self.cooking_time >= 10) and (len(self.ingredients) < 4):
-            return difficulty_levels.get("Intermediate")
-        elif (self.cooking_time >= 10) and (len(self.ingredients) >= 4):
-            return difficulty_levels.get("Hard")
+        ingredients_list = self.ingredients.split(", ")
+        num_ingredients = len(ingredients_list)
+
+        if self.cooking_time < 10:
+            if num_ingredients < 4:
+                difficulty = difficulty_levels.get("Easy")
+            else:
+                difficulty = difficulty_levels.get("Medium")
         else:
-            print("Something bad happened, please try again")
+            if num_ingredients < 4:
+                difficulty = difficulty_levels.get("Intermediate")
+            else:
+                difficulty = difficulty_levels.get("Hard")
+
+            # Log the difficulty level
+            logging.info(f"Recipe difficulty for {self.name}: {difficulty}")
+
+        return difficulty
 
     def save(self, *args, **kwargs):
         self.name = self.name.title()
