@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 200px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.image-container {
+  display: flex;
+  overflow: hidden; /* Use hidden to hide the scrollbar */
+  max-width: 100%; /* Ensure the container doesn't exceed the viewport */
+  height: 200px;
+  white-space: nowrap;
+}
+
+.image-container img {
+  flex: 0 0 auto;
+  width: 100%;
+  object-fit: cover;
+  animation: scroll 15s linear infinite;
+  white-space: nowrap;
+}
+@media (min-width: 600px) {
+  .image-container img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .image-container img {
+    width: 33.33%;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-524.94px, 0, 0);
+  }
+}

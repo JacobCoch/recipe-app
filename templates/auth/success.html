@@ -16,7 +16,7 @@
     <header>
       <div class="container">
         <div class="navbar-brand d-flex justify-content-center">
-          <a href="{% url 'recipes:home' %}" class="navbar-brand">
+          <a href="{% url 'success' %}" class="navbar-brand">
             <img
               src="/media/recipes/new-tastebuds.png"
               class="logo"
@@ -29,11 +29,8 @@
     <div class="container-fluid mt-4">
       <div class="row">
         <div id="content-container" class="col-md-6 message-content">
-          <h1 id="heading">Welcome to TasteBuds</h1>
-          <p id="message">
-            Your personal recipe organizer. Store your recipes in TasteBuds and
-            access them on all your devices, anywhere, anytime.
-          </p>
+          <h1 id="heading"></h1>
+          <p id="message"></p>
           <div>
             <button type="button" class="success-btns login-btn btn">
               <a href="{% url 'login' %}">Login</a>
@@ -44,16 +41,15 @@
               id="next-button"
               class="success-btns next-btn btn"
             >
-              <a>Next</a>
+              <a>Learn more</a>
             </button>
           </div>
         </div>
         <div id="image-container" class="col-md-6 image-content">
           <img
             id="main-image"
-            src="/media/recipes/brownies.jpg"
             class="img-fluid rounded w-100 h-100 mx-auto"
-            alt="Brownies"
+            alt=""
           />
         </div>
       </div>
