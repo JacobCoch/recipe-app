@@ -1,0 +1,140 @@
+INFO 2023-10-16 16:22:21,915 autoreload Watching for file changes with StatReloader
+INFO 2023-10-16 16:23:07,417 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:23:07,550 models Ingredients: 'Lettuce, Dressing', Length: 17
+INFO 2023-10-16 16:23:07,558 models Ingredients: 'Rice, Chicken, Vegetables', Length: 25
+INFO 2023-10-16 16:23:07,566 models Ingredients: 'Bread, Syrup, Powdered Sugar', Length: 28
+INFO 2023-10-16 16:23:07,573 models Ingredients: 'English Muffins, Ham, Eggs', Length: 26
+INFO 2023-10-16 16:23:07,582 models Ingredients: 'Eggs, Salt, Pepper', Length: 18
+INFO 2023-10-16 16:23:07,589 models Ingredients: 'Assorted Fruit, Cookies', Length: 23
+INFO 2023-10-16 16:23:07,597 models Ingredients: 'Salmon, Seasoning, Butter, Milk', Length: 31
+INFO 2023-10-16 16:23:07,605 models Ingredients: 'Octopus', Length: 7
+INFO 2023-10-16 16:23:07,613 models Ingredients: 'Cherries, Syrup, Pancake', Length: 24
+INFO 2023-10-16 16:23:07,621 models Ingredients: 'Ramen Noodles, Oil, Soy Sauce, Green Onions, Pepper', Length: 51
+INFO 2023-10-16 16:23:07,628 models Ingredients: 'Oats, Milk, Chocolate Chips', Length: 27
+INFO 2023-10-16 16:23:07,636 models Ingredients: 'Shaved Ice, Flavoring', Length: 21
+INFO 2023-10-16 16:23:07,646 models Ingredients: 'Green Peppers, Ground Chicken, Salt, Pepper', Length: 43
+INFO 2023-10-16 16:23:07,654 models Ingredients: 'Eggs, Water, Powdered Sugar, Oil, Chocolate', Length: 43
+INFO 2023-10-16 16:23:07,661 models Ingredients: 'Strawberries, Sugar, Butter, Vanilla', Length: 36
+INFO 2023-10-16 16:24:17,370 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:24:17,411 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:24:19,580 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:24:19,586 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:24:19,657 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:24:19,665 models Ingredients: 'Lettuce, Dressing', Length: 17
+INFO 2023-10-16 16:24:19,672 models Ingredients: 'Rice, Chicken, Vegetables', Length: 25
+INFO 2023-10-16 16:24:19,679 models Ingredients: 'Bread, Syrup, Powdered Sugar', Length: 28
+INFO 2023-10-16 16:24:19,687 models Ingredients: 'English Muffins, Ham, Eggs', Length: 26
+INFO 2023-10-16 16:24:19,694 models Ingredients: 'Eggs, Salt, Pepper', Length: 18
+INFO 2023-10-16 16:24:19,701 models Ingredients: 'Assorted Fruit, Cookies', Length: 23
+INFO 2023-10-16 16:24:19,709 models Ingredients: 'Salmon, Seasoning, Butter, Milk', Length: 31
+INFO 2023-10-16 16:24:19,716 models Ingredients: 'Octopus', Length: 7
+INFO 2023-10-16 16:24:19,724 models Ingredients: 'Cherries, Syrup, Pancake', Length: 24
+INFO 2023-10-16 16:24:19,731 models Ingredients: 'Ramen Noodles, Oil, Soy Sauce, Green Onions, Pepper', Length: 51
+INFO 2023-10-16 16:24:19,738 models Ingredients: 'Oats, Milk, Chocolate Chips', Length: 27
+INFO 2023-10-16 16:24:19,746 models Ingredients: 'Shaved Ice, Flavoring', Length: 21
+INFO 2023-10-16 16:24:19,753 models Ingredients: 'Green Peppers, Ground Chicken, Salt, Pepper', Length: 43
+INFO 2023-10-16 16:24:19,761 models Ingredients: 'Eggs, Water, Powdered Sugar, Oil, Chocolate', Length: 43
+INFO 2023-10-16 16:24:19,768 models Ingredients: 'Strawberries, Sugar, Butter, Vanilla', Length: 36
+INFO 2023-10-16 16:25:44,510 autoreload C:\code\projects\A2_Recipe_App\src\recipes\models.py changed, reloading.
+INFO 2023-10-16 16:25:45,148 autoreload Watching for file changes with StatReloader
+INFO 2023-10-16 16:26:14,756 autoreload Watching for file changes with StatReloader
+INFO 2023-10-16 16:26:18,205 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:26:18,205 models Recipe difficulty for Ricey Greens: Medium
+INFO 2023-10-16 16:26:18,206 models Ingredients: 'Lettuce, Dressing', Length: 17
+INFO 2023-10-16 16:26:18,206 models Recipe difficulty for Salad: Medium
+INFO 2023-10-16 16:26:18,206 models Ingredients: 'Rice, Chicken, Vegetables', Length: 25
+INFO 2023-10-16 16:26:18,206 models Recipe difficulty for Chicken Bowl: Hard
+INFO 2023-10-16 16:26:18,206 models Ingredients: 'Bread, Syrup, Powdered Sugar', Length: 28
+INFO 2023-10-16 16:26:18,206 models Recipe difficulty for French Toast: Medium
+INFO 2023-10-16 16:26:18,207 models Ingredients: 'English Muffins, Ham, Eggs', Length: 26
+INFO 2023-10-16 16:26:18,207 models Recipe difficulty for Breakfast Sandwich: Hard
+INFO 2023-10-16 16:26:18,207 models Ingredients: 'Eggs, Salt, Pepper', Length: 18
+INFO 2023-10-16 16:26:18,207 models Recipe difficulty for Eggs: Hard
+INFO 2023-10-16 16:26:18,207 models Ingredients: 'Assorted Fruit, Cookies', Length: 23
+INFO 2023-10-16 16:26:18,207 models Recipe difficulty for Fruit Cookies: Hard
+INFO 2023-10-16 16:26:18,208 models Ingredients: 'Salmon, Seasoning, Butter, Milk', Length: 31
+INFO 2023-10-16 16:26:18,208 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-16 16:26:18,208 models Ingredients: 'Octopus', Length: 7
+INFO 2023-10-16 16:26:18,208 models Recipe difficulty for Octopus: Hard
+INFO 2023-10-16 16:26:18,209 models Ingredients: 'Cherries, Syrup, Pancake', Length: 24
+INFO 2023-10-16 16:26:18,209 models Recipe difficulty for Cherry Pancakes: Hard
+INFO 2023-10-16 16:26:18,209 models Ingredients: 'Ramen Noodles, Oil, Soy Sauce, Green Onions, Pepper', Length: 51
+INFO 2023-10-16 16:26:18,209 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-16 16:26:18,209 models Ingredients: 'Oats, Milk, Chocolate Chips', Length: 27
+INFO 2023-10-16 16:26:18,209 models Recipe difficulty for Oatmeal: Medium
+INFO 2023-10-16 16:26:18,210 models Ingredients: 'Shaved Ice, Flavoring', Length: 21
+INFO 2023-10-16 16:26:18,210 models Recipe difficulty for Snow Cones: Medium
+INFO 2023-10-16 16:26:18,210 models Ingredients: 'Green Peppers, Ground Chicken, Salt, Pepper', Length: 43
+INFO 2023-10-16 16:26:18,210 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-16 16:26:18,210 models Ingredients: 'Eggs, Water, Powdered Sugar, Oil, Chocolate', Length: 43
+INFO 2023-10-16 16:26:18,210 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-16 16:26:18,211 models Ingredients: 'Strawberries, Sugar, Butter, Vanilla', Length: 36
+INFO 2023-10-16 16:26:18,211 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-16 16:26:24,990 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:26:24,990 models Recipe difficulty for Ricey Greens: Medium
+INFO 2023-10-16 16:26:24,997 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:26:24,997 models Recipe difficulty for Ricey Greens: Medium
+INFO 2023-10-16 16:26:27,000 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:26:27,000 models Recipe difficulty for Ricey Greens: Medium
+INFO 2023-10-16 16:26:27,002 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:26:27,002 models Recipe difficulty for Ricey Greens: Medium
+INFO 2023-10-16 16:26:27,057 models Ingredients: 'Rice, Vegetables', Length: 16
+INFO 2023-10-16 16:26:27,057 models Recipe difficulty for Ricey Greens: Medium
+INFO 2023-10-16 16:26:27,057 models Ingredients: 'Lettuce, Dressing', Length: 17
+INFO 2023-10-16 16:26:27,057 models Recipe difficulty for Salad: Medium
+INFO 2023-10-16 16:26:27,058 models Ingredients: 'Rice, Chicken, Vegetables', Length: 25
+INFO 2023-10-16 16:26:27,058 models Recipe difficulty for Chicken Bowl: Hard
+INFO 2023-10-16 16:26:27,058 models Ingredients: 'Bread, Syrup, Powdered Sugar', Length: 28
+INFO 2023-10-16 16:26:27,058 models Recipe difficulty for French Toast: Medium
+INFO 2023-10-16 16:26:27,059 models Ingredients: 'English Muffins, Ham, Eggs', Length: 26
+INFO 2023-10-16 16:26:27,059 models Recipe difficulty for Breakfast Sandwich: Hard
+INFO 2023-10-16 16:26:27,059 models Ingredients: 'Eggs, Salt, Pepper', Length: 18
+INFO 2023-10-16 16:26:27,059 models Recipe difficulty for Eggs: Hard
+INFO 2023-10-16 16:26:27,059 models Ingredients: 'Assorted Fruit, Cookies', Length: 23
+INFO 2023-10-16 16:26:27,059 models Recipe difficulty for Fruit Cookies: Hard
+INFO 2023-10-16 16:26:27,060 models Ingredients: 'Salmon, Seasoning, Butter, Milk', Length: 31
+INFO 2023-10-16 16:26:27,060 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-16 16:26:27,060 models Ingredients: 'Octopus', Length: 7
+INFO 2023-10-16 16:26:27,060 models Recipe difficulty for Octopus: Hard
+INFO 2023-10-16 16:26:27,060 models Ingredients: 'Cherries, Syrup, Pancake', Length: 24
+INFO 2023-10-16 16:26:27,060 models Recipe difficulty for Cherry Pancakes: Hard
+INFO 2023-10-16 16:26:27,061 models Ingredients: 'Ramen Noodles, Oil, Soy Sauce, Green Onions, Pepper', Length: 51
+INFO 2023-10-16 16:26:27,061 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-16 16:26:27,061 models Ingredients: 'Oats, Milk, Chocolate Chips', Length: 27
+INFO 2023-10-16 16:26:27,061 models Recipe difficulty for Oatmeal: Medium
+INFO 2023-10-16 16:26:27,061 models Ingredients: 'Shaved Ice, Flavoring', Length: 21
+INFO 2023-10-16 16:26:27,062 models Recipe difficulty for Snow Cones: Medium
+INFO 2023-10-16 16:26:27,062 models Ingredients: 'Green Peppers, Ground Chicken, Salt, Pepper', Length: 43
+INFO 2023-10-16 16:26:27,062 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-16 16:26:27,062 models Ingredients: 'Eggs, Water, Powdered Sugar, Oil, Chocolate', Length: 43
+INFO 2023-10-16 16:26:27,062 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-16 16:26:27,063 models Ingredients: 'Strawberries, Sugar, Butter, Vanilla', Length: 36
+INFO 2023-10-16 16:26:27,063 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-16 16:30:07,375 autoreload C:\code\projects\A2_Recipe_App\src\recipes\models.py changed, reloading.
+INFO 2023-10-16 16:30:08,029 autoreload Watching for file changes with StatReloader
+INFO 2023-10-16 16:30:14,486 autoreload C:\code\projects\A2_Recipe_App\src\recipes\models.py changed, reloading.
+INFO 2023-10-16 16:30:15,144 autoreload Watching for file changes with StatReloader
+INFO 2023-10-16 16:30:19,513 autoreload C:\code\projects\A2_Recipe_App\src\recipes\models.py changed, reloading.
+INFO 2023-10-16 16:30:20,120 autoreload Watching for file changes with StatReloader
+INFO 2023-10-16 16:30:23,397 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-16 16:30:23,397 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-16 16:30:23,398 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-16 16:30:23,398 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-16 16:30:23,398 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-16 16:30:23,399 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-16 16:30:23,399 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-16 16:30:23,399 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-16 16:30:23,400 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-16 16:30:23,400 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-16 16:30:23,401 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-16 16:30:30,150 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-16 16:30:30,150 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-16 16:30:30,151 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-16 16:30:30,151 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-16 16:30:30,151 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-16 16:30:30,152 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-16 16:30:30,152 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-16 16:30:30,152 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-16 16:30:30,153 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-16 16:30:30,153 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-16 16:30:30,154 models Recipe difficulty for Strawberry Cake: Hard
