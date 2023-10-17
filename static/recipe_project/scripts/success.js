@@ -36,14 +36,17 @@ document.addEventListener('DOMContentLoaded', function () {
     'lightpink',
   ];
 
+  const signUpButton = ['Learn More', 'Learn More', 'Learn More', 'Sign Up'];
+
   // Initialize an index to keep track of the current image
   let currentImageIndex = 0;
 
-  function setInitialContent() {
+  const setInitialContent = () => {
     headingElement.textContent = headings[0];
     messageElement.textContent = messages[0];
     imageElement.src = imageSources[0];
-  }
+    nextButton.textContent = signUpButton[0];
+  };
 
   const preloadedImages = [];
   for (let i = 0; i < imageSources.length; i++) {
@@ -66,6 +69,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Change the background color
     contentContainer.style.backgroundColor =
       backgroundColors[currentImageIndex];
+
+    const signupURL = nextButton.getAttribute('data-signup-url');
+    if (nextButton.textContent === 'Sign Up' && signupURL) {
+      window.location.href = signupURL;
+    } else {
+      nextButton.textContent = signUpButton[currentImageIndex];
+    }
   });
+
   setInitialContent();
 });

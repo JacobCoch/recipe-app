@@ -1,41 +1,61 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import AuthenticationForm
+
+from .forms import LoginForm, SignUpForm
 
 
 # define a function view called login_view that takes a request from user
 def login_view(request):
-    # initialize:
-    # error_message to None
     error_message = None
-    # form object with username and password fields
-    form = AuthenticationForm()
+    success_message = None
+    form = LoginForm()  # Use the CustomLoginForm
 
-    # when user hits "login" button, then POST request is generated
     if request.method == "POST":
-        # read the data sent by the form via POST request
-        form = AuthenticationForm(data=request.POST)
+        form = LoginForm(data=request.POST)
 
-        # check if form is valid
         if form.is_valid():
-            username = form.cleaned_data.get("username")  # read username
-            password = form.cleaned_data.get("password")  # read password
-
-            # use Django authenticate function to validate the user
+            username = form.cleaned_data.get("username")
+            password = form.cleaned_data.get("password")
             user = authenticate(username=username, password=password)
+
             if user is not None:
-                # then use pre-defined Django function to login
+                success_message = "You have successfully logged in!"
                 login(request, user)
+                
                 return redirect("recipes:recipes")
         else:
-            error_message = "ooops.. something went wrong"
+            error_message = "Oops, something went wrong."
 
-    # prepare data to send from view to template
-    context = {"form": form, "error_message": error_message}
-    # load the login page using "context" information
+    context = {"form": form, "error_message": error_message, "success_message": success_message}
     return render(request, "auth/login.html", context)
 
 
 def success(request):
     logout(request)  # the use pre-defined Django function to logout
     return render(request, "auth/success.html")
+
+
+def signup(request):
+    error_message = None
+    success_message = None
+    form = SignUpForm()
+
+    if request.method == "POST":
+        form = SignUpForm(data=request.POST)
+
+        if form.is_valid():
+            # Create the user and log them in
+            user = form.create_user()
+            login(request, user)
+            success_message = "You have successfully signed up!"
+            return redirect("recipes:recipes")
+
+        else:
+            error_message = "Oops, something went wrong during signup."
+
+    context = {
+        "form": form,
+        "error_message": error_message,
+        "success_message": success_message,
+    }
+    return render(request, "auth/signup.html", context)

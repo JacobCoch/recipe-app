@@ -26,11 +26,11 @@ body.background-image {
   }
 }
 
-.login-container {
+.signup-container {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.login-text {
+.signup-text {
   font-family: serif;
   font-size: 20px;
   font-weight: bold;
@@ -38,12 +38,18 @@ body.background-image {
   text-align: center;
 }
 @media (max-width: 283px) {
-  .login-text {
+  .signup-text {
     font-size: 16px;
+  }
+  .login-link {
+    font-size: 16px;
+  }
+  .signup-btn {
+    font-size: 14px;
   }
 }
 
-.login-btn {
+.signup-btn {
   width: 6rem;
 }
 
@@ -75,18 +81,26 @@ body.background-image {
   margin-top: 5px;
 }
 
+.redirect-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
 /* Style the button as well */
-.login-btn {
+.signup-btn {
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-
-  margin-top: 2rem;
 }
 
-.login-btn:hover {
+.signup-btn:hover {
   background-color: #0056b3;
   cursor: pointer;
+}
+
+.login-link {
+  color: rgb(0, 0, 83);
+  margin-left: 10px;
 }

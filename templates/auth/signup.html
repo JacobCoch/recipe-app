@@ -10,7 +10,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'styles/login.css' %}"
+      href="{% static 'styles/signup.css' %}"
     />
   </head>
 
@@ -22,8 +22,8 @@
       style="max-width: 400px; margin-bottom: 120px"
     >
       <h1 class="title">Welcome</h1>
-      <div class="login-container p-4 rounded">
-        <p class="login-text">Please enter your username and password.</p>
+      <div class="signup-container p-4 rounded">
+        <p class="signup-text">Please enter your username and password.</p>
         {% if error_message %}
         <p class="error-message">{{ error_message }}</p>
         {% endif %}
@@ -62,9 +62,32 @@
               <div class="error-message">{{ form.password.errors.0 }}</div>
               {% endif %}
             </div>
-            <button type="submit" class="btn btn-primary login-btn">
-              Login
-            </button>
+            <div class="form-group">
+              <label
+                for="{{ form.confirm_password.id_for_label }}"
+                class="sr-only"
+              ></label>
+              <input
+                type="password"
+                name="{{ form.confirm_password.name }}"
+                id="{{ form.confirm_password.id_for_label }}"
+                class="form-control"
+                placeholder="Confirm Password"
+              />
+              {% if form.confirm_password.errors %}
+              <div class="error-message">
+                {{ form.confirm_password.errors.0 }}
+              </div>
+              {% endif %}
+            </div>
+            <div class="redirect-buttons">
+              <button type="submit" class="btn btn-primary signup-btn">
+                Sign Up
+              </button>
+              <a href="{% url 'login' %}" class="login-link">
+                Already a member?
+              </a>
+            </div>
           </div>
         </form>
         {% if success_message %}
