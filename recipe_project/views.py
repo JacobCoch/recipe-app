@@ -7,6 +7,7 @@ from .forms import LoginForm, SignUpForm
 # define a function view called login_view that takes a request from user
 def login_view(request):
     error_message = None
+    success_message = None
     form = LoginForm()  # Use the CustomLoginForm
 
     if request.method == "POST":
@@ -18,12 +19,14 @@ def login_view(request):
             user = authenticate(username=username, password=password)
 
             if user is not None:
+                success_message = "You have successfully logged in!"
                 login(request, user)
+                
                 return redirect("recipes:recipes")
         else:
             error_message = "Oops, something went wrong."
 
-    context = {"form": form, "error_message": error_message}
+    context = {"form": form, "error_message": error_message, "success_message": success_message}
     return render(request, "auth/login.html", context)
 
 

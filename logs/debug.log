@@ -571,3 +571,6 @@ Traceback (most recent call last):
     raise self.error(
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'endif'. Did you forget to register or load this tag?
 INFO 2023-10-17 13:45:21,571 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 14:22:47,953 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 14:39:57,934 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-17 14:39:58,549 autoreload Watching for file changes with StatReloader
