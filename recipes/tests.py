@@ -47,7 +47,7 @@ class RecipeModelTest(TestCase):
         recipe = Recipe.objects.get(id=1)
         recipe.cooking_time = 5
         recipe.ingredients = "flour, water, salt, eggs"
-        self.assertEquals(recipe.calc_difficulty(), "Medium 😅")
+        self.assertEquals(recipe.calc_difficulty(), "Medium")
 
     def test_save(self):
         recipe = Recipe.objects.get(id=1)
