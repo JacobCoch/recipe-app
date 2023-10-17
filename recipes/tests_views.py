@@ -20,28 +20,28 @@ class RecipeListViewTest(TestCase):
 
 class RecipeDetailViewTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(
-            username='testuser', password='testpass'
-        )
+        self.user = User.objects.create_user(username="testuser", password="testpass")
         self.recipe = Recipe.objects.create(
-            name='Test Recipe',
-            ingredients='ingr, ingr'    ,
+            name="Test Recipe",
+            ingredients="ingr, ingr",
             cooking_time=10,
         )
 
     def test_recipe_detail_view(self):
-        self.client.login(username='testuser', password='testpass')
-        url = reverse('recipes:detail', args=[self.recipe.pk])
+        self.client.login(username="testuser", password="testpass")
+        url = reverse("recipes:detail", args=[self.recipe.pk])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'recipes/detail.html')
+        self.assertTemplateUsed(response, "recipes/detail.html")
         self.assertContains(response, self.recipe.name)
         self.assertContains(response, self.recipe.ingredients)
         self.assertContains(response, self.recipe.cooking_time)
         self.assertContains(response, self.recipe.calc_difficulty())
 
     def test_get_context_data(self):
-        recipe = Recipe.objects.create(name="Test Recipe", ingredients="ingr, ingr", cooking_time=10)
+        recipe = Recipe.objects.create(
+            name="Test Recipe", ingredients="ingr, ingr", cooking_time=10
+        )
         view = RecipeDetailView()
         view.object = recipe
         context = view.get_context_data()
@@ -54,7 +54,9 @@ class RecipeDetailViewTest(TestCase):
             name="Easy Recipe", ingredients="ingr, ingr, ingr", cooking_time=5
         )
         medium_recipe = Recipe.objects.create(
-            name="Medium Recipe", ingredients="ingr, ingr, ingr, ingr, ingr", cooking_time=5
+            name="Medium Recipe",
+            ingredients="ingr, ingr, ingr, ingr, ingr",
+            cooking_time=5,
         )
         intermediate_recipe = Recipe.objects.create(
             name="Intermediate Recipe", ingredients="ingr, ingr, ingr", cooking_time=10

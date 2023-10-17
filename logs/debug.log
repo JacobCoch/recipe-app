@@ -236,3 +236,338 @@ INFO 2023-10-16 16:59:41,917 models Recipe difficulty for Test Recipe: Intermedi
 INFO 2023-10-16 16:59:41,917 models Recipe difficulty for Test Recipe: Intermediate
 INFO 2023-10-16 16:59:42,502 models Recipe difficulty for Test Recipe: Intermediate
 INFO 2023-10-16 16:59:42,505 models Recipe difficulty for Test Recipe: Intermediate
+INFO 2023-10-17 11:34:13,054 models Recipe difficulty for Intermediate Recipe: Intermediate
+INFO 2023-10-17 11:34:13,054 models Recipe difficulty for Hard Recipe: Hard
+INFO 2023-10-17 11:34:13,629 models Recipe difficulty for Test Recipe: Intermediate
+INFO 2023-10-17 11:34:13,629 models Recipe difficulty for Test Recipe: Intermediate
+INFO 2023-10-17 11:34:14,205 models Recipe difficulty for Test Recipe: Intermediate
+INFO 2023-10-17 11:34:14,212 models Recipe difficulty for Test Recipe: Intermediate
+INFO 2023-10-17 11:34:23,605 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 11:41:20,296 autoreload C:\code\projects\A2_Recipe_App\src\recipes\models.py changed, reloading.
+INFO 2023-10-17 11:41:20,929 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 11:41:22,183 autoreload C:\code\projects\A2_Recipe_App\src\recipes\urls.py changed, reloading.
+INFO 2023-10-17 11:41:22,866 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 11:44:02,203 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 11:55:38,752 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 11:56:42,685 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 11:57:51,550 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-17 11:57:52,218 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 11:58:04,872 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\urls.py changed, reloading.
+INFO 2023-10-17 11:58:05,493 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 12:16:51,018 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-17 12:20:44,218 log Not Found: /{% url "signup" %}
+INFO 2023-10-17 13:13:26,399 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-17 13:13:27,019 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:13:30,326 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-17 13:13:30,956 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:15:13,558 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-17 13:15:14,182 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:15:36,119 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\forms.py changed, reloading.
+INFO 2023-10-17 13:15:36,726 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-17 13:16:11,696 log Forbidden (CSRF cookie not set.): /signup/
+INFO 2023-10-17 13:18:10,484 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\forms.py changed, reloading.
+INFO 2023-10-17 13:18:11,125 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:18:25,842 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\forms.py changed, reloading.
+INFO 2023-10-17 13:18:26,495 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:18:54,675 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\forms.py changed, reloading.
+INFO 2023-10-17 13:18:55,349 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:19:10,093 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\forms.py changed, reloading.
+INFO 2023-10-17 13:19:10,716 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:19:36,829 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\forms.py changed, reloading.
+INFO 2023-10-17 13:19:37,495 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:20:18,090 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-17 13:20:18,728 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:21:39,713 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\forms.py changed, reloading.
+INFO 2023-10-17 13:21:40,356 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:22:42,675 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\forms.py changed, reloading.
+INFO 2023-10-17 13:22:43,287 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:22:55,935 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-17 13:22:56,598 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:22:57,854 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-17 13:22:58,502 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:25:57,721 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-17 13:25:58,332 autoreload Watching for file changes with StatReloader
+INFO 2023-10-17 13:26:39,796 autoreload Watching for file changes with StatReloader
+ERROR 2023-10-17 13:26:50,029 log Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\code\projects\A2_Recipe_App\src\recipe_project\views.py", line 58, in signup
+    return render(request, "auth/signup.html", context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'endif'. Did you forget to register or load this tag?
+ERROR 2023-10-17 13:30:24,195 log Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\code\projects\A2_Recipe_App\src\recipe_project\views.py", line 58, in signup
+    return render(request, "auth/signup.html", context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'endif'. Did you forget to register or load this tag?
+ERROR 2023-10-17 13:33:09,781 log Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\code\projects\A2_Recipe_App\src\recipe_project\views.py", line 58, in signup
+    return render(request, "auth/signup.html", context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'endif'. Did you forget to register or load this tag?
+ERROR 2023-10-17 13:33:27,458 log Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\code\projects\A2_Recipe_App\src\recipe_project\views.py", line 58, in signup
+    return render(request, "auth/signup.html", context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'endif'. Did you forget to register or load this tag?
+INFO 2023-10-17 13:36:25,137 autoreload Watching for file changes with StatReloader
+ERROR 2023-10-17 13:36:31,603 log Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\code\projects\A2_Recipe_App\src\recipe_project\views.py", line 58, in signup
+    return render(request, "auth/signup.html", context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'endif'. Did you forget to register or load this tag?
+ERROR 2023-10-17 13:38:43,434 log Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\code\projects\A2_Recipe_App\src\recipe_project\views.py", line 58, in signup
+    return render(request, "auth/signup.html", context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'endif'. Did you forget to register or load this tag?
+INFO 2023-10-17 13:42:05,503 autoreload Watching for file changes with StatReloader
+ERROR 2023-10-17 13:43:53,025 log Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endif'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\code\projects\A2_Recipe_App\src\recipe_project\views.py", line 58, in signup
+    return render(request, "auth/signup.html", context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'endif'. Did you forget to register or load this tag?
+INFO 2023-10-17 13:45:21,571 autoreload Watching for file changes with StatReloader

@@ -1,0 +1,57 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body.background-image {
+  background-image: url(../images/honey-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(0, 0, 83);
+  text-align: center;
+}
+@media (max-width: 283px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
+.signup-container {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.signup-text {
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+@media (max-width: 283px) {
+  .signup-text {
+    font-size: 16px;
+  }
+}
+
+.signup-btn {
+  width: 6rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+  margin: 0 auto;
+}

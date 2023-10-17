@@ -32,14 +32,20 @@
           <h1 id="heading"></h1>
           <p id="message"></p>
           <div>
-            <button type="button" class="success-btns login-btn btn">
-              <a href="{% url 'login' %}">Login</a>
+            <button
+              type="button"
+              class="success-btns login-btn btn"
+              id="login-button"
+              data-login-url="{% url 'login' %}"
+              onclick="window.location.href = this.getAttribute('data-login-url')"
+            >
+              Login
             </button>
-
             <button
               type="button"
               id="next-button"
               class="success-btns next-btn btn"
+              data-signup-url="{% url 'signup' %}"
             >
               <a>Learn more</a>
             </button>
