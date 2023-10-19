@@ -79,6 +79,8 @@ body.background-image {
 .error-message {
   color: red;
   margin-top: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .redirect-buttons {
