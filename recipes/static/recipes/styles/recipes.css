@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: beige;
+}
+
 .logo {
   width: 200px;
 }
@@ -18,7 +22,7 @@
   align-items: center;
   height: 200px;
   width: 80%;
-  margin: 0 auto;
+  margin: 2rem auto;
   box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
     15px 15px 15px rgba(0, 0, 0, 0.1),
     inset -5px -5px 5px rgba(255, 255, 255, 0.2),
@@ -41,12 +45,13 @@
   margin-bottom: 1rem;
 }
 .action-btns {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
   align-items: center;
-  width: 40%;
+  height: 100%;
+  width: 600px;
+  padding-right: 1rem 1rem;
 }
 /*
 .item-action {
@@ -94,7 +99,7 @@
   transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #28282d;
+  background: rgb(0, 0, 83);
   border-radius: 10px;
 }
 
@@ -125,47 +130,65 @@
   transition: 0s;
   transform: translate(0, 5%);
 }
-#add-recipe-btn {
+
+@media screen and (max-width: 1267px) {
+  .action-btns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+    padding-right: 3rem;
+  }
+  .item-action {
+    margin: 2rem;
+  }
+  .box-content {
+    height: 250px;
+  }
 }
-#change-recipe-btn {
-}
-#delete-recipe-btn {
-}
-#view-all-recipes-btn {
+@media screen and (max-width: 950px) {
+  .text-content {
+    display: none;
+  }
+  .action-btns {
+    margin: auto;
+    padding: 0;
+  }
+  .suggestions-content {
+    flex-direction: column;
+  }
+  .suggestion-item {
+    flex: 0 0 100%;
+  }
 }
 
-.image-container {
-  display: flex;
-  overflow: hidden; /* Use hidden to hide the scrollbar */
-  max-width: 100%; /* Ensure the container doesn't exceed the viewport */
-  height: 200px;
-  white-space: nowrap;
+.suggestions-section {
+  text-align: center; /* Center the content horizontally */
+  margin-top: 60px; /* Add top margin for separation from the previous content */
 }
 
-.image-container img {
+.suggestions-content {
+  display: flex; /* Display suggestions in a row */
+  justify-content: center; /* Center the suggestions horizontally */
+  gap: 20px; /* Add space between suggestions */
+  flex-wrap: wrap;
+}
+
+.suggestion-item {
+  text-align: center; /* Center the content inside each suggestion box */
+}
+
+.suggestion-item img {
   flex: 0 0 auto;
-  width: 100%;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
-  animation: scroll 15s linear infinite;
-  white-space: nowrap;
-}
-@media (min-width: 600px) {
-  .image-container img {
-    width: 50%;
-  }
+
+  white-space: nowrap; /* Center the images horizontally and add space below */
 }
 
-@media (min-width: 900px) {
-  .image-container img {
-    width: 33.33%;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-524.94px, 0, 0);
-  }
+.suggestion-item h3 {
+  color: rgb(0, 0, 83);
 }

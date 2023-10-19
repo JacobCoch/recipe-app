@@ -19,12 +19,18 @@
         <a href="{% url 'recipes:recipes' %}" class="navbar-brand">
           <img src="/media/recipes/new-tastebuds.png" class="logo" alt="Logo" />
         </a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'recipes:recipes' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url '' %}">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'success' %}">Logout</a>
+          </li>
+        </ul>
       </div>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'success' %}">Logout</a>
-        </li>
-      </ul>
     </nav>
 
     <div class="box-content">
@@ -46,16 +52,24 @@
       </div>
     </div>
 
-    <!-- Carousel -->
-    <!-- <div class="image-container">
-      <img src="/media/recipes/brownies.jpg" alt="image 1" />
-      <img src="/media/recipes/egg_breakfast.jpg" alt="image 2" />
-      <img src="/media/recipes/octopus.jpg" alt="image 3" />
-      <img src="/media/recipes/garlic_noodles.jpg" alt="image 4" />
-      <img src="/media/recipes/french_toast.jpg" alt="image 5" />
+    <div class="suggestions-section">
+      <h2>Suggestions</h2>
+      <div class="suggestions-content">
+        {% for suggestion in random_suggestions %}
+        <div class="suggestion-item">
+          <a href="{{ suggestion.get_absolute_url }}">
+            <img
+              src="{{ suggestion.pic.url }}"
+              alt="{{ suggestion.name }}"
+              class="suggestion-image"
+            />
+          </a>
+          <h3>{{ suggestion.name }}</h3>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-
-    <!-- Recipe List -->
+    <!-- Recipe List 
     <div class="container mt-4">
       <h1>Recipe List</h1>
       <table class="table table-bordered">
@@ -84,6 +98,7 @@
         </tbody>
       </table>
     </div>
+    -->
   </body>
   <script src="{% static 'scripts/recipe.js' %}"></script>
 </html>

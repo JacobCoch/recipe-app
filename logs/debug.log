@@ -3167,3 +3167,20 @@ Traceback (most recent call last):
   File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'recipe' not found. 'recipe' is not a valid view function or pattern name.
+INFO 2023-10-19 11:02:48,376 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-19 11:02:54,300 log Not Found: /favicon.ico
+INFO 2023-10-19 11:49:32,467 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 11:49:33,176 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 11:53:57,700 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 11:53:58,327 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 11:56:03,029 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 11:56:03,720 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 11:58:04,117 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 11:58:04,775 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 11:58:51,618 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 11:58:52,251 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 11:59:06,415 views Retrieved 16 recipes from the database.
+INFO 2023-10-19 11:59:06,416 views Selected 3 random recipes for suggestions.
+DEBUG 2023-10-19 11:59:06,416 views Added 3 random recipes to the context.
+INFO 2023-10-19 11:59:45,344 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 11:59:45,950 autoreload Watching for file changes with StatReloader
