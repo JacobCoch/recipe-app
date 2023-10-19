@@ -4,9 +4,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 import random
 import logging
 
-class RecipeListView(LoginRequiredMixin, ListView):
+class HomeView(LoginRequiredMixin, ListView):
     model = Recipe
-    template_name = "recipes/recipes.html"
+    template_name = "recipes/home.html"
 
 
     def get_context_data(self, **kwargs):
@@ -33,3 +33,7 @@ class RecipeDetailView(LoginRequiredMixin, DetailView):
         difficulty = recipe.calc_difficulty()
         context["difficulty"] = difficulty
         return context
+
+class RecipeListView(LoginRequiredMixin, ListView):
+    model = Recipe
+    template_name = "recipes/recipe.html"

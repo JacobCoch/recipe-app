@@ -3184,3 +3184,864 @@ INFO 2023-10-19 11:59:06,416 views Selected 3 random recipes for suggestions.
 DEBUG 2023-10-19 11:59:06,416 views Added 3 random recipes to the context.
 INFO 2023-10-19 11:59:45,344 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
 INFO 2023-10-19 11:59:45,950 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:01:47,273 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,857 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,858 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,859 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,860 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,860 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,860 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,860 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,860 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,860 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,860 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,860 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,861 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,862 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,863 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,864 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,865 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,866 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,866 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,866 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,866 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,866 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,866 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,866 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,866 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,866 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,867 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,867 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,867 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,867 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,867 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,867 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,867 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,867 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,867 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,868 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,869 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,869 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,869 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,869 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,869 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,870 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,871 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,872 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,873 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,874 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,875 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,875 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,875 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,875 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,875 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,876 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,877 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:21:07,878 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:21:07,879 models Recipe difficulty for Eggs: Intermediate
+ERROR 2023-10-19 12:21:07,974 log Internal Server Error: /recipe/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+INFO 2023-10-19 12:23:52,764 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 12:23:53,457 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,833 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,834 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,835 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,835 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,835 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,835 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,835 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,836 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,837 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,838 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,839 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,840 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,841 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,842 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,842 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,842 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,842 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,842 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,842 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,842 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,842 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,843 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,844 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,845 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,845 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,845 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,845 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,845 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,845 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,845 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,845 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,846 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,847 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,847 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,847 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,847 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,847 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,847 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,847 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,847 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,847 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,848 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,849 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,850 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,851 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,852 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,852 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,852 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,852 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,852 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,852 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:24:47,853 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:24:47,854 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:24:47,854 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:24:47,854 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:24:47,854 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:24:47,854 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:24:47,854 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:24:47,854 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:24:47,854 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:24:47,854 models Recipe difficulty for Buttered Salmon: Hard
+ERROR 2023-10-19 12:24:47,879 log Internal Server Error: /recipe/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'recipes' not found. 'recipes' is not a valid view function or pattern name.
+INFO 2023-10-19 12:33:09,872 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,872 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,872 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,872 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,872 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,872 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,873 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,873 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,873 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,873 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,873 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,873 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,873 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,874 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,875 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,876 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,876 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,876 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,876 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,876 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,876 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,876 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,876 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,876 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,877 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,877 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,877 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,877 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,877 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,877 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,878 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,879 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,880 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,881 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,881 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,881 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,881 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,881 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,881 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,881 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,881 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,881 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,882 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,882 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,882 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,882 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,882 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,882 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,882 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,882 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,882 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,883 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,883 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,883 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,883 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,883 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,883 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,883 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,883 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,883 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,884 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,885 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,886 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,886 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,886 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,886 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,886 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,886 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,886 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,887 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,887 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,887 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,887 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,887 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,887 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,888 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,889 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,890 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,891 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,891 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,891 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,891 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,891 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,891 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,891 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,891 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,891 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,892 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,892 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,892 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,892 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,892 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,892 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,892 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,892 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,893 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,893 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,893 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,893 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,893 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,893 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,893 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,893 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,893 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Chicken Fried Rice: Hard
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Garlic Noodles: Hard
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Brownies: Hard
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Strawberry Cake: Hard
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Eggs: Intermediate
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Octopus: Intermediate
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Cherry Pancakes: Intermediate
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Chicken Bowl: Intermediate
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 12:33:09,894 models Recipe difficulty for Chicken Fried Rice: Hard
+ERROR 2023-10-19 12:33:09,911 log Internal Server Error: /recipe/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'recipes' not found. 'recipes' is not a valid view function or pattern name.
+INFO 2023-10-19 12:34:17,040 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 12:34:17,691 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:34:18,955 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 12:34:19,601 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:35:02,249 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-19 12:35:02,871 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:35:06,189 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-19 12:35:06,793 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:36:09,382 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 12:36:09,985 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:36:29,919 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 12:36:30,567 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:37:47,477 autoreload C:\code\projects\A2_Recipe_App\src\recipe_project\views.py changed, reloading.
+INFO 2023-10-19 12:37:48,109 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:37:57,592 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:40:22,806 autoreload C:\code\projects\A2_Recipe_App\src\recipes\urls.py changed, reloading.
+INFO 2023-10-19 12:40:23,414 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:40:37,079 autoreload C:\code\projects\A2_Recipe_App\src\recipes\urls.py changed, reloading.
+INFO 2023-10-19 12:40:37,678 autoreload Watching for file changes with StatReloader
+ERROR 2023-10-19 12:40:40,138 log Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: HomeView() takes no arguments
+INFO 2023-10-19 12:41:28,825 autoreload C:\code\projects\A2_Recipe_App\src\recipes\urls.py changed, reloading.
+INFO 2023-10-19 12:41:29,438 autoreload Watching for file changes with StatReloader
+ERROR 2023-10-19 12:41:31,530 log Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\code\projects\A2_Recipe_App\src\recipes\views.py", line 13, in get_context_data
+    context = super().get_context_data(**kwargs)
+TypeError: super(type, obj): obj must be an instance or subtype of type
+INFO 2023-10-19 12:41:39,074 autoreload C:\code\projects\A2_Recipe_App\src\recipes\urls.py changed, reloading.
+INFO 2023-10-19 12:41:39,698 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:41:40,972 autoreload C:\code\projects\A2_Recipe_App\src\recipes\urls.py changed, reloading.
+INFO 2023-10-19 12:41:41,601 autoreload Watching for file changes with StatReloader
+ERROR 2023-10-19 12:41:42,210 log Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: HomeView() takes no arguments
+INFO 2023-10-19 12:44:25,700 autoreload C:\code\projects\A2_Recipe_App\src\recipes\urls.py changed, reloading.
+INFO 2023-10-19 12:44:26,343 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 12:45:38,977 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 12:45:39,643 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-19 12:50:01,780 log Not Found: /home/{% url 'recipes:recipe' %}
+WARNING 2023-10-19 12:50:26,532 log Not Found: /home/{% url 'recipes:recipe' %}
+WARNING 2023-10-19 12:50:28,112 log Not Found: /home/{% url 'recipes:recipe' %}
+WARNING 2023-10-19 12:50:29,398 log Not Found: /home/{% url 'recipes:recipe' %}
+WARNING 2023-10-19 12:50:33,800 log Not Found: /home/{% url 'recipes:recipes' %}
+WARNING 2023-10-19 12:51:00,720 log Not Found: /home/{% url 'recipes' %}
+WARNING 2023-10-19 12:51:06,309 log Not Found: /home/{% url 'recipes' %}
+WARNING 2023-10-19 12:51:09,456 log Not Found: /home/{% url 'recipe' %}
+WARNING 2023-10-19 12:53:23,591 log Not Found: /home/{% url 'recipes:recipe' %}
+WARNING 2023-10-19 12:58:00,552 log Not Found: /home/{% url 'recipes:recipe' %}
+WARNING 2023-10-19 12:58:06,268 log Not Found: /home/{% url 'recipes:recipe' %}

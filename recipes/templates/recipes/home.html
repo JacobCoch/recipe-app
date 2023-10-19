@@ -9,29 +9,30 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'styles/recipes.css' %}"
+      href="{% static 'styles/home.css' %}"
     />
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="navbar-brand d-flex justify-content-center">
-        <a href="{% url 'recipes:recipes' %}" class="navbar-brand">
-          <img src="/media/recipes/new-tastebuds.png" class="logo" alt="Logo" />
-        </a>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'recipes:recipes' %}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url '' %}">Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'success' %}">Logout</a>
-          </li>
-        </ul>
+    <div class="dropdown show">
+      <a
+        class="btn btn-secondary dropdown-toggle"
+        href="#"
+        role="button"
+        id="dropdownMenuLink"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Dropdown link
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
       </div>
-    </nav>
+    </div>
 
     <div class="box-content">
       <div class="text-content">
@@ -46,7 +47,11 @@
         <button class="item-action" id="delete-recipe-btn">
           Delete Recipe
         </button>
-        <button class="item-action" id="view-all-recipes-btn">
+        <button
+          class="item-action"
+          id="view-all-recipes-btn"
+          data-recipe-url="{% url 'recipes:recipe' %}"
+        >
           View All Recipes
         </button>
       </div>
@@ -100,5 +105,5 @@
     </div>
     -->
   </body>
-  <script src="{% static 'scripts/recipe.js' %}"></script>
+  <script src="{% static 'scripts/home.js' %}"></script>
 </html>

@@ -10,10 +10,6 @@ body {
   width: 200px;
 }
 
-.navbar-nav {
-  margin-left: auto;
-}
-
 .box-content {
   display: flex;
   flex-direction: row;
