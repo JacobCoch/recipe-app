@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 200px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
