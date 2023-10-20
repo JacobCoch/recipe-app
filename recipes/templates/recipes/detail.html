@@ -6,7 +6,6 @@
   <head>
     <title>TasteBuds</title>
     {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
-
     <link
       rel="stylesheet"
       type="text/css"
@@ -15,28 +14,38 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="navbar-brand d-flex justify-content-center">
-        <a href="{% url 'recipes:recipes' %}" class="navbar-brand">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="navbar-brand">
+        <a href="{% url 'recipes:home' %}" class="navbar-brand">
           <img src="/media/recipes/new-tastebuds.png" class="logo" alt="Logo" />
         </a>
       </div>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'success' %}">Logout</a>
-        </li>
-      </ul>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'recipes:home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'recipes:recipe' %}">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'success' %}">Logout</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    <div>
+      <h2>Recipes</h2>
+      <b>Name: </b> {{ recipe.name }}<br />
 
-    <h2>Recipes</h2>
-    <b>Name: </b> {{ object.name }}<br />
+      <b>Ingredients: </b> {{ recipe.ingredients }}<br />
 
-    <b>Ingredients: </b> {{ object.ingredients }}<br />
+      <b>Cooking Time: </b> {{ recipe.cooking_time }} (minutes)<br />
 
-    <b>Cooking Time: </b> {{ object.cooking_time }} (minutes)<br />
+      <b>Difficulty: </b> {{ difficulty }}<br />
 
-    <b>Difficulty: </b> {{ difficulty }}<br />
-
-    <img src="{{object.pic.url}}" width="100" height="100" />
+      <img src="{{ recipe.pic.url }}" />
+    </div>
   </body>
 </html>

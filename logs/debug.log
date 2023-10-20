@@ -4045,3 +4045,270 @@ WARNING 2023-10-19 12:51:09,456 log Not Found: /home/{% url 'recipe' %}
 WARNING 2023-10-19 12:53:23,591 log Not Found: /home/{% url 'recipes:recipe' %}
 WARNING 2023-10-19 12:58:00,552 log Not Found: /home/{% url 'recipes:recipe' %}
 WARNING 2023-10-19 12:58:06,268 log Not Found: /home/{% url 'recipes:recipe' %}
+INFO 2023-10-19 17:08:25,841 autoreload Watching for file changes with StatReloader
+WARNING 2023-10-19 17:08:28,599 log Not Found: /favicon.ico
+ERROR 2023-10-19 17:16:34,456 log Internal Server Error: /recipe/15/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'recipes' not found. 'recipes' is not a valid view function or pattern name.
+INFO 2023-10-19 17:18:40,411 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,419 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,419 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,419 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,419 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:18:40,420 models Recipe difficulty for Ricey Greens: Hard
+ERROR 2023-10-19 17:18:40,438 log Internal Server Error: /recipe/16/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'recipes' not found. 'recipes' is not a valid view function or pattern name.
+INFO 2023-10-19 17:19:06,232 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,241 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,242 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,242 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,242 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,242 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,242 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,242 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,242 models Recipe difficulty for Ricey Greens: Hard
+INFO 2023-10-19 17:19:06,242 models Recipe difficulty for Ricey Greens: Hard
+ERROR 2023-10-19 17:19:06,260 log Internal Server Error: /recipe/16/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'recipes' not found. 'recipes' is not a valid view function or pattern name.
+INFO 2023-10-19 17:19:09,817 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,824 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,824 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,824 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,824 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,824 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,824 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:19:09,825 models Recipe difficulty for Breakfast Sandwich: Intermediate
+ERROR 2023-10-19 17:19:09,842 log Internal Server Error: /recipe/12/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'recipes' not found. 'recipes' is not a valid view function or pattern name.
+ERROR 2023-10-19 17:19:27,933 log Internal Server Error: /recipe/4/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'recipes' not found. 'recipes' is not a valid view function or pattern name.
+INFO 2023-10-19 17:22:45,867 models Recipe difficulty for Cherry Pancakes: Intermediate
+ERROR 2023-10-19 17:23:38,980 log Internal Server Error: /recipe/
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\code\virtualenvs\a2-ve-recipeapp\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 9: 'static'. Did you forget to register or load this tag?
+INFO 2023-10-19 17:24:32,359 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 17:24:59,749 models Recipe difficulty for Fruit Cookies: Intermediate
+INFO 2023-10-19 17:26:03,570 models Recipe difficulty for Breakfast Sandwich: Intermediate
+INFO 2023-10-19 17:27:54,931 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 17:27:55,549 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 17:28:50,735 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 17:28:51,385 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 17:32:38,780 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 17:32:39,421 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 17:34:02,168 models Recipe difficulty for Buttered Salmon: Hard
+INFO 2023-10-19 17:35:01,610 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 17:35:02,222 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 17:35:16,991 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 17:35:17,608 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 17:35:18,853 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 17:35:19,490 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 17:37:06,380 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 17:37:06,990 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 17:38:28,903 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 17:38:29,529 autoreload Watching for file changes with StatReloader
+INFO 2023-10-19 17:38:54,570 autoreload C:\code\projects\A2_Recipe_App\src\recipes\views.py changed, reloading.
+INFO 2023-10-19 17:38:55,192 autoreload Watching for file changes with StatReloader
