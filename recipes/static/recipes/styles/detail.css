@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 
-.logo {
-  width: 200px;
+body {
+  background-color: beige;
 }
 
-.navbar-nav {
-  margin-left: auto;
+.logo {
+  width: 200px;
 }

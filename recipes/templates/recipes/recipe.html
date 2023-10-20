@@ -8,8 +8,12 @@
     {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
       type="text/css"
-      href="{% static 'styles/detail.css' %}"
+      href="{% static 'styles/recipe.css' %}"
     />
   </head>
   <body>
@@ -35,17 +39,30 @@
         </ul>
       </div>
     </nav>
-    <div>
-      <h2>Recipes</h2>
-      <b>Name: </b> {{ recipe.name }}<br />
-
-      <b>Ingredients: </b> {{ recipe.ingredients }}<br />
-
-      <b>Cooking Time: </b> {{ recipe.cooking_time }} (minutes)<br />
-
-      <b>Difficulty: </b> {{ difficulty }}<br />
-
-      <img src="{{ recipe.pic.url }}" />
-    </div>
+    <container>
+      <div>
+        <h1>Recipes</h1>
+        <div class="recipe-container">
+          {% for recipe in recipes %}
+          <div class="recipe">
+            <img src="{{recipe.pic.url}}" width="100" height="100" />
+            <h3>{{ recipe.name }}</h3>
+            <p>{{ recipe.difficulty }}</p>
+            <button
+              class="details-button"
+              id="details-button"
+              data-recipe-url="{% url 'recipes:detail' recipe.pk %}"
+            >
+              View Details
+            </button>
+            <button class="btn">
+              <i class="fa-solid fa-heart"></i>
+            </button>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </container>
   </body>
+  <script src="{% static 'scripts/recipe.js' %}"></script>
 </html>

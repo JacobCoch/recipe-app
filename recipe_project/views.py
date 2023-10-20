@@ -26,7 +26,7 @@ def login_view(request):
             if user is not None:
                 login(request, user)
                 success_message = "You have successfully logged in!"
-                return redirect("recipes:recipes")
+                return redirect("recipes:home")
             else:
                 error_message = "Oops, something went wrong."
 
@@ -52,7 +52,7 @@ def signup(request):
 
             login(request, user)
             success_message = "You have successfully signed up!"
-            return redirect("recipes:recipes")
+            return redirect("recipes:home")
 
         else:
             error_message = "Oops, something went wrong during signup."

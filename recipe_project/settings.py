@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LOGGING_DIR = os.path.join(BASE_DIR, "logs")  # Define a directory for log files
+LOGGING_DIR = "/code/logs/A2_Recipe_App"  # Define a directory for log files
 
 if not os.path.exists(LOGGING_DIR):
     os.makedirs(LOGGING_DIR)
