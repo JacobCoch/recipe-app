@@ -6,16 +6,12 @@
   <head>
     <title>TasteBuds</title>
     {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+
     <link
       rel="stylesheet"
       type="text/css"
       href="{% static 'styles/recipe.css' %}"
     />
-    <script src="{% static 'scripts/recipe.js' %}" defer></script>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -42,16 +38,29 @@
     </nav>
     <container>
       <div>
-        <button><i class="fas fa-plus"></i></button>
-        <h1>
-          <span>R</span>
-          <span>E</span>
-          <span>C</span>
-          <span>I</span>
-          <span>P</span>
-          <span>E</span>
-          <span>S</span>
-        </h1>
+        <div class="header">
+          <h1>
+            <span>R</span>
+            <span>E</span>
+            <span>C</span>
+            <span>I</span>
+            <span>P</span>
+            <span>E</span>
+            <span>S</span>
+          </h1>
+          <button id="add-recipe-button">ADD</button>
+        </div>
+        <div class="modal" id="recipe-modal" style="display: none">
+          <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Add a New Recipe</h2>
+            <form id="recipe-form" method="post">
+              {% csrf_token %} {{ form.as_p }}
+              <button type="submit">Add Recipe</button>
+            </form>
+          </div>
+        </div>
+
         <div class="recipe-container">
           {% for recipe in recipes %}
           <div class="recipe">
@@ -63,7 +72,7 @@
               id="details-button"
               data-recipe-url="{% url 'recipes:detail' recipe.pk %}"
             >
-              View Details
+              Details
             </button>
             <button class="btn">
               <i class="fas fa-heart"></i>
@@ -75,4 +84,9 @@
     </container>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/10833f84d9.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="{% static 'scripts/recipe.js' %}" defer></script>
 </html>
