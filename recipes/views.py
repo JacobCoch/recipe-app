@@ -4,17 +4,18 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 import random
 import logging
 
+
 class HomeView(LoginRequiredMixin, ListView):
     model = Recipe
     template_name = "recipes/home.html"
 
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        all_recipes = Recipe.objects.all()        
-        random_recipes = random.sample(list(all_recipes), 3)       
+        all_recipes = Recipe.objects.all()
+        random_recipes = random.sample(list(all_recipes), 3)
         context["random_suggestions"] = random_recipes
         return context
+
 
 class RecipeDetailView(LoginRequiredMixin, DetailView):
     model = Recipe
@@ -26,12 +27,11 @@ class RecipeDetailView(LoginRequiredMixin, DetailView):
         difficulty = recipe.calc_difficulty()
         context["difficulty"] = difficulty
         return context
-    
 
 
 class RecipeListView(LoginRequiredMixin, ListView):
     model = Recipe
-    template_name = "recipes/recipe.html"  
+    template_name = "recipes/recipe.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
