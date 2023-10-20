@@ -35,17 +35,22 @@
         </ul>
       </div>
     </nav>
-    <div>
-      <h2>Recipes</h2>
-      <b>Name: </b> {{ recipe.name }}<br />
-
-      <b>Ingredients: </b> {{ recipe.ingredients }}<br />
-
-      <b>Cooking Time: </b> {{ recipe.cooking_time }} (minutes)<br />
-
-      <b>Difficulty: </b> {{ difficulty }}<br />
-
-      <img src="{{ recipe.pic.url }}" />
+    <div class="main-container">
+      <div class="action-buttons">
+        <button>Edit Recipe</button>
+        <button>Delete Recipe</button>
+      </div>
+      <div class="body-container">
+        <div>
+          <img src="{{ recipe.pic.url }}" class="recipe-image" />
+        </div>
+        <div class="recipe-info">
+          <b>Name: </b> {{ recipe.name }}<br />
+          <b>Ingredients: </b> {{ recipe.ingredients }}<br />
+          <b>Cooking Time: </b> {{ recipe.cooking_time }} (minutes)<br />
+          <b>Difficulty: </b> {{ difficulty }}<br />
+        </div>
+      </div>
     </div>
   </body>
 </html>
