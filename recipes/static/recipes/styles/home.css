@@ -23,6 +23,7 @@ body {
     15px 15px 15px rgba(0, 0, 0, 0.1),
     inset -5px -5px 5px rgba(255, 255, 255, 0.2),
     inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .text-content {
@@ -144,19 +145,13 @@ body {
     height: 250px;
   }
 }
-@media screen and (max-width: 950px) {
-  .text-content {
-    display: none;
-  }
+@media screen and (max-width: 967px) {
   .action-btns {
     margin: auto;
     padding: 0;
   }
-  .suggestions-content {
-    flex-direction: column;
-  }
-  .suggestion-item {
-    flex: 0 0 100%;
+  .box-content {
+    height: 500px;
   }
 }
 
@@ -166,40 +161,36 @@ body {
 }
 
 .suggestions-content {
-  display: flex; /* Display suggestions in a row */
-  justify-content: center; /* Center the suggestions horizontally */
-  gap: 20px; /* Add space between suggestions */
+  display: flex;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
 }
 
 .suggestion-item {
-  text-align: center; /* Center the content inside each suggestion box */
+  flex: 2 1 auto;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .suggestion-item img {
-  --s: 15px; /* size of the frame */
-  --b: 2px; /* border thickness */
-  --w: 200px; /* width of the image */
-  --c: #7b3b3b;
-
-  width: var(--w);
-  aspect-ratio: 1;
+  width: 200px;
+  height: 200px;
+  border-radius: 2rem;
   object-fit: cover;
-  padding: calc(2 * var(--s));
-  --_g: var(--c) var(--b), #0000 0 calc(100% - var(--b)), var(--c) 0;
-  background: linear-gradient(var(--_g)) 50%/100% var(--_i, 100%) no-repeat,
-    linear-gradient(90deg, var(--_g)) 50% / var(--_i, 100%) 100% no-repeat;
-  outline: calc(var(--w) / 2) solid #0009;
-  outline-offset: calc(var(--w) / -2 - 2 * var(--s));
-  transition: 0.4s;
-  cursor: pointer; /* Center the images horizontally and add space below */
+  object-position: center;
+  transition: 0.3s ease-in-out;
 }
-.suggestion-item::hover {
-  outline: var(--b) solid var(--c);
-  outline-offset: calc(var(--s) / -2);
-  --_i: calc(100% - 2 * var(--s));
+.suggestion-item:hover img {
+  opacity: 0.5;
+  border-radius: 50%;
 }
 
 .suggestion-item h3 {
   color: rgb(0, 0, 83);
+  font-size: 21px;
 }
