@@ -14,7 +14,7 @@ class HomeView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         all_recipes = Recipe.objects.all()
-        random_recipes = random.sample(list(all_recipes), 3)
+        random_recipes = random.sample(list(all_recipes), 5)
         context["random_suggestions"] = random_recipes
         return context
 
