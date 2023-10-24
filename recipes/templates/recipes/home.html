@@ -37,19 +37,21 @@
       </div>
     </nav>
 
+    <!-- Start of welcome contianer -->
     <div class="box-content">
       <div class="text-content">
         <h1>Welcome</h1>
         <h2>What would you like to do?</h2>
       </div>
       <div class="action-btns">
-        <button class="item-action" id="add-recipe-btn">Add Recipe</button>
-        <button class="item-action" id="change-recipe-btn">
-          Change Recipe
+        <button
+          class="item-action"
+          id="add-recipe-btn"
+          data-add-recipe-url="{% url 'recipes:add' %}"
+        >
+          Add Recipe
         </button>
-        <button class="item-action" id="delete-recipe-btn">
-          Delete Recipe
-        </button>
+
         <button
           class="item-action"
           id="view-all-recipes-btn"
@@ -59,7 +61,21 @@
         </button>
       </div>
     </div>
+    <!-- End of welcome container -->
 
+    <!-- Start of recipe search -->
+    <div class="search-container">
+      <h1>Search for a recipe</h1>
+      <form action="" method="POST">
+        {% csrf_token %} {{form}}
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      {% if recipes_df %} {{ recipes_df|safe }} {% else %}
+      <p>No recipes found</p>
+      {% endif %}
+    </div>
+
+    <!-- Start of suggestions container -->
     <div class="suggestions-section">
       <h2>Suggestions</h2>
       <div class="suggestions-content">
@@ -77,6 +93,8 @@
         {% endfor %}
       </div>
     </div>
+    <!-- End of suggestions container -->
+
     <!-- Recipe List 
     <div class="container mt-4">
       <h1>Recipe List</h1>
