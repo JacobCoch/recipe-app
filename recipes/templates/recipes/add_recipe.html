@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TasteBuds</title>
+    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/add_recipe.css' %}"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="navbar-brand">
+        <a href="{% url 'recipes:home' %}" class="navbar-brand">
+          <img src="/media/recipes/new-tastebuds.png" class="logo" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'recipes:home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'recipes:recipe' %}">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'success' %}">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End NavBar -->
+
+    <!-- Start of add recipe container -->
+    <div class="container">
+      <h1>Add a New Recipe</h1>
+      <form id="recipe-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="recipe-content">
+          <div class="form-group">
+            {{ form.name.label_tag }} {{ form.name }}
+          </div>
+          <div class="form-group">
+            {{ form.cooking_time.label_tag }} {{ form.cooking_time }}
+          </div>
+          <div class="form-group">{{ form.pic.label_tag }} {{ form.pic }}</div>
+        </div>
+        <div class="ingredients-content">
+          <h2>Ingredients</h2>
+          <div class="form-group">
+            {{ form.ingredients.label_tag }} {{ form.ingredients }}
+          </div>
+        </div>
+        <div class="button-container">
+          <button type="submit">Add Recipe</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
