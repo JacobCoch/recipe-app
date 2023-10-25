@@ -57,3 +57,7 @@
 .next-btn:hover {
   color: rgb(225, 225, 226);
 }
+
+#main-image {
+  object-fit: cover;
+}
