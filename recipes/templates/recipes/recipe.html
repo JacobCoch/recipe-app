@@ -15,25 +15,55 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand navbar-light bg-light">
       <div class="navbar-brand">
         <a href="{% url 'recipes:home' %}" class="navbar-brand">
           <img src="/media/recipes/new-tastebuds.png" class="logo" alt="Logo" />
         </a>
       </div>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'recipes:home' %}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'recipes:recipe' %}">Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'success' %}">Logout</a>
-          </li>
-        </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'recipes:home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'recipes:recipe' %}">Recipes</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav logout">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'success' %}"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path
+                d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button
+          class="custom-button-with-svg"
+          type="button"
+          id="dropdownMenuButton"
+          aria-haspopup="true"
+          aria-expanded="false"
+        ></button>
+        <div
+          class="dropdown-menu"
+          style="right: 0; left: auto"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <a class="dropdown-item" href="{% url 'recipes:home' %}">Home</a>
+          <a class="dropdown-item" href="{% url 'recipes:recipe' %}">Recipes</a>
+          <a class="dropdown-item" href="{% url 'recipes:add' %}">Add Recipe</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{% url 'success' %}">Logout</a>
+        </div>
       </div>
     </nav>
     <container>
@@ -48,17 +78,13 @@
             <span>E</span>
             <span>S</span>
           </h1>
-          <button id="add-recipe-button">ADD</button>
-        </div>
-        <div class="modal" id="recipe-modal" style="display: none">
-          <div class="modal-content">
-            <span class="close" id="close-modal">&times;</span>
-            <h2>Add a New Recipe</h2>
-            <form id="recipe-form" method="post">
-              {% csrf_token %} {{ form.as_p }}
-              <button type="submit">Add Recipe</button>
-            </form>
-          </div>
+          <button
+            class="item-action"
+            id="add-recipe-btn"
+            data-add-recipe-url="{% url 'recipes:add' %}"
+          >
+            Add
+          </button>
         </div>
 
         <div class="recipe-container">
