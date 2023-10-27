@@ -52,7 +52,7 @@ function appearTitle(titlePart, delay) {
     let char = titlePart.children[i];
     let initState = char.textContent; // Store the initial state
     let inc = 0;
-    let dur = 1;
+    let dur = 0.5;
     let startDate = 0;
     let del = i * 0.15 + delay;
     gsap.fromTo(
