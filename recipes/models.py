@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 import logging
-
+from django.conf import settings
 # Create your models here.
 from django.db import models
 
@@ -10,7 +10,7 @@ class Recipe(models.Model):
     name = models.CharField(max_length=50)
     ingredients = models.CharField(max_length=255)
     cooking_time = models.IntegerField()
-
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     pic = models.ImageField(upload_to="recipes", default="no_picture.jpg")
 
     def __str__(self):
