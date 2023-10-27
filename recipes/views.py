@@ -1,4 +1,4 @@
-from .utils import get_chart
+from django.shortcuts import  redirect, get_object_or_404
 from django.views.generic import DetailView, ListView, CreateView
 
 from .models import Recipe
@@ -51,7 +51,24 @@ class AddRecipe(LoginRequiredMixin, CreateView):
     template_name = "recipes/add_recipe.html"
     form_class = RecipeForm
 
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
         return context
+    
+
+def delete_recipe(request, recipe_id):
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
+
+    if request.user == recipe.author:
+        if request.method == "POST":
+            recipe.delete()
+            return redirect("recipes:recipe")
+    else:
+        # Handle cases where the user is not the author (you can redirect or show an error)
+        pass
+    return redirect("recipes:recipe")
