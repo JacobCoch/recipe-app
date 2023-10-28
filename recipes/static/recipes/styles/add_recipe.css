@@ -43,11 +43,11 @@ body {
   }
 }
 
-.container {
+.add-recipe-box {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  margin-top: 5rem;
   flex-direction: column;
+  align-items: center;
 }
 
 .container h1 {
@@ -55,31 +55,63 @@ body {
   justify-content: center;
 }
 
-#recipe-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  margin: 20px;
-}
-.recipe-content,
-.ingredients-content {
-  width: 400px;
-  height: 400px;
-  margin: 10px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  color: black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.button-container {
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #333; /* Change text color to a darker shade */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px; /* Add padding to the container for spacing */
+}
+
+.form-group {
+  margin: 10px 0; /* Add margin to space out form groups */
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555; /* Change label text color to a slightly lighter shade */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc; /* Add a light border around form inputs */
+  border-radius: 3px;
+  box-shadow: none;
+  background-color: #f9f9f9; /* Use a slightly off-white background color */
+}
+
+/* Style the Ingredients title */
+.recipe-content h2 {
+  margin: 15px 0;
+  font-size: 18px;
+  text-align: center;
+  color: #555; /* Change text color to a slightly lighter shade */
+}
+
+.button-content {
   display: flex;
   width: 100px;
   justify-content: center;
+  padding-left: 2rem;
 }
 
-.button-container button {
+.button-content button {
   display: block;
   margin: 15px 10px;
   padding: 10px 20px;
@@ -90,6 +122,6 @@ body {
   cursor: pointer;
 }
 
-.button-container button:hover {
+.button-content button:hover {
   background-color: #0056b3;
 }

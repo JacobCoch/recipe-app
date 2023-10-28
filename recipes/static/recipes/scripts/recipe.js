@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const detailsButtons = document.querySelectorAll('.details-button');
   const dropdownButton = document.getElementById('dropdownMenuButton');
   const dropdownMenu = document.querySelector('.dropdown-menu');
+  const likeButtons = document.querySelectorAll('.like-button');
 
   // Add click event to the custom button to show/hide the dropdown
   dropdownButton.addEventListener('click', () => {
@@ -52,7 +53,7 @@ function appearTitle(titlePart, delay) {
     let char = titlePart.children[i];
     let initState = char.textContent; // Store the initial state
     let inc = 0;
-    let dur = 1;
+    let dur = 0.5;
     let startDate = 0;
     let del = i * 0.15 + delay;
     gsap.fromTo(
