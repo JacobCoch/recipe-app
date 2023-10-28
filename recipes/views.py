@@ -1,9 +1,9 @@
 from django.shortcuts import  redirect, get_object_or_404
 from django.views.generic import DetailView, ListView, CreateView
 
-from .models import Recipe, SavedRecipe
+from .models import Recipe
 
-from .forms import RecipeForm
+from .forms import RecipeForm, FavoriteRecipeForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 import matplotlib
@@ -77,13 +77,16 @@ def delete_recipe(request, recipe_id):
 
 
 @login_required
-def like_recipe(request, recipe_id):
-    recipe = get_object_or_404(Recipe, pk=recipe_id)
-    user = request.user
+def faved_recipe(request, recipe_id):
+    if request.method == "POST":
+        form = FavoriteRecipeForm(request.POST)
+        if form.is_valid():
+            recipe_id = form.cleaned_data("recipe_id")
+            user = request.user
+            recipe = Recipe.objects.get(pk=recipe_id)
 
-    if SavedRecipe.objects.filter(user=user, recipe=recipe).exists():
-        SavedRecipe.objects.filter(user=user, recipe=recipe).delete()
-    else:
-        SavedRecipe.objects.create(user=user, recipe=recipe)
-    
-    return redirect("recipes:detail", pk=recipe_id)
+            if recipe.users_favorite.filter(pk=user.pk).exists():
+                recipe.users_favorite.remove(user)
+            else:
+                recipe.users_favorite.add(user)
+        return redirect("recipes:detail", pk=recipe_id)

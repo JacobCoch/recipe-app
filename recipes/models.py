@@ -13,7 +13,11 @@ class Recipe(models.Model):
     cooking_time = models.IntegerField()
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     pic = models.ImageField(upload_to="recipes", default="no_picture.jpg")
-    saving_users = models.ManyToManyField(settings.AUTH_USER_MODEL, through='SavedRecipe', related_name='liked_recipes')
+    users_favorite = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        related_name='favorite_recipes',
+        blank=True
+    )
 
     def __str__(self):
         return f"""
@@ -58,10 +62,6 @@ class Recipe(models.Model):
     def get_absolute_url(self):
         return reverse("recipes:detail", kwargs={"pk": self.pk})
     
+    def is_liked_by_user(self, user):
+        return self.users_favorite.filter(pk=user.pk).exists()
 
-class SavedRecipe(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return f"{self.user.username} likes {self.recipe.name}"
