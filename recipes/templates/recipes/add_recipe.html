@@ -88,32 +88,25 @@
     <!-- Start of add recipe container -->
     <div class="add-recipe-box">
       <h1>Add a New Recipe</h1>
-      <form
-        class="container form-container"
-        method="post"
-        enctype="multipart/form-data"
-      >
+      <form class="form-container" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <div class="col-md-8 recipe-ingredients">
-          <div class="row recipe-content">
-            <div class="form-group">
-              {{ form.name.label_tag }} {{ form.name }}
-            </div>
-            <div class="form-group">
-              {{ form.cooking_time.label_tag }} {{ form.cooking_time }}
-            </div>
-            <div class="form-group">
-              {{ form.pic.label_tag }} {{ form.pic }}
-            </div>
+
+        <div class="row recipe-content">
+          <div class="form-group">
+            {{ form.name.label_tag }} {{ form.name }}
           </div>
-          <div class="row ingredients-content">
-            <h2>Ingredients</h2>
-            <div class="form-group">
-              {{ form.ingredients.label_tag }} {{ form.ingredients }}
-            </div>
+          <div class="form-group">
+            {{ form.cooking_time.label_tag }} {{ form.cooking_time }}
+          </div>
+          <div class="form-group">{{ form.pic.label_tag }} {{ form.pic }}</div>
+
+          <h2>Ingredients</h2>
+          <div class="form-group">
+            {{ form.ingredients.label_tag }} {{ form.ingredients }}
           </div>
         </div>
-        <div class="col button-container">
+
+        <div class="col button-content">
           <button type="submit">Add Recipe</button>
         </div>
       </form>

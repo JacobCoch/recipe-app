@@ -80,6 +80,20 @@
         </div>
       </div>
     </nav>
+    <div>
+      <h1>Hello, {{user.username}}</h1>
+      {% if request.user.pic %}
+      <img src="{{ request.user.pic.url }}" alt="Profile Picture" />
+      {% else %}
+      <p>No profile picture available.</p>
+      {% endif %}
+      <p>{{ request.user.bio }}</p>
+      <ul>
+        {% for recipe in request.user.liked_recipes.all %}
+        <li>{{ recipe.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
   </body>
   <script src="{% static 'scripts/profile.js' %}" defer></script>
 </html>

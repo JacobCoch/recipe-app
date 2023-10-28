@@ -117,9 +117,12 @@
               >
                 Details
               </button>
-              <button class="btn">
-                <i class="fas fa-heart"></i>
-              </button>
+              <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn like-button">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </form>
             </div>
           </div>
           {% endfor %}

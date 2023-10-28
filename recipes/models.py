@@ -6,12 +6,14 @@ from django.conf import settings
 from django.db import models
 
 
+
 class Recipe(models.Model):
     name = models.CharField(max_length=50)
     ingredients = models.CharField(max_length=255)
     cooking_time = models.IntegerField()
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     pic = models.ImageField(upload_to="recipes", default="no_picture.jpg")
+    saving_users = models.ManyToManyField(settings.AUTH_USER_MODEL, through='SavedRecipe', related_name='liked_recipes')
 
     def __str__(self):
         return f"""
@@ -55,3 +57,11 @@ class Recipe(models.Model):
 
     def get_absolute_url(self):
         return reverse("recipes:detail", kwargs={"pk": self.pk})
+    
+
+class SavedRecipe(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.user.username} likes {self.recipe.name}"

@@ -1,9 +1,11 @@
 from django.shortcuts import  redirect, get_object_or_404
 from django.views.generic import DetailView, ListView, CreateView
 
-from .models import Recipe
+from .models import Recipe, SavedRecipe
+
 from .forms import RecipeForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 import matplotlib
 import pandas as pd
 import random
@@ -60,7 +62,7 @@ class AddRecipe(LoginRequiredMixin, CreateView):
 
         return context
     
-
+@login_required
 def delete_recipe(request, recipe_id):
     recipe = get_object_or_404(Recipe, pk=recipe_id)
 
@@ -72,3 +74,16 @@ def delete_recipe(request, recipe_id):
         # Handle cases where the user is not the author (you can redirect or show an error)
         pass
     return redirect("recipes:recipe")
+
+
+@login_required
+def like_recipe(request, recipe_id):
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
+    user = request.user
+
+    if SavedRecipe.objects.filter(user=user, recipe=recipe).exists():
+        SavedRecipe.objects.filter(user=user, recipe=recipe).delete()
+    else:
+        SavedRecipe.objects.create(user=user, recipe=recipe)
+    
+    return redirect("recipes:detail", pk=recipe_id)
