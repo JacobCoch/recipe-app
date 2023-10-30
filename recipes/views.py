@@ -2,6 +2,7 @@ from django.shortcuts import  redirect, get_object_or_404
 from django.views.generic import DetailView, ListView, CreateView
 
 from .models import Recipe
+from django.contrib.auth.models import User
 
 from .forms import RecipeForm, FavoriteRecipeForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -90,3 +91,11 @@ def faved_recipe(request, recipe_id):
             else:
                 recipe.users_favorite.add(user)
         return redirect("recipes:detail", pk=recipe_id)
+    
+
+class Profile(LoginRequiredMixin, DetailView):
+    model = User
+    template_name = "recipes/profile.html"
+    context_object_name = "user"
+    slug_field = "username"
+    slug_url_kwarg = "username"

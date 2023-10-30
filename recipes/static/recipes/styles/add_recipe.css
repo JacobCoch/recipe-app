@@ -57,9 +57,10 @@ body {
 
 .form-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .recipe-content {

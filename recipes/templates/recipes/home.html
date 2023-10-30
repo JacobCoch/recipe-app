@@ -32,7 +32,9 @@
       </ul>
       <ul class="navbar-nav logout">
         <li class="nav-item">
-          <a class="nav-link" href="{{ user.get_absolute_url }}"
+          <a
+            class="nav-link"
+            href="{% url 'recipes:profile' username=user.username %}"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               height="24"
@@ -75,7 +77,9 @@
           <a class="dropdown-item" href="{% url 'recipes:recipe' %}">Recipes</a>
           <a class="dropdown-item" href="{% url 'recipes:add' %}">Add Recipe</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{{ user.get_absolute_url }}"
+          <a
+            class="dropdown-item"
+            href="{% url 'recipes:profile' username=user.username %}"
             >Profile</a
           >
           <a class="dropdown-item" href="{% url 'success' %}">Logout</a>

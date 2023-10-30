@@ -1,6 +1,6 @@
 from django import forms
 
-from users.models import CustomUser
+from django.contrib.auth.models import User
 
 
 class PasswordField(forms.CharField):
@@ -39,5 +39,5 @@ class SignUpForm(forms.Form):
         username = self.cleaned_data.get("username")
         password = self.cleaned_data.get("password")
 
-        user = CustomUser.objects.create_user(username=username, password=password)
+        user = User.objects.create_user(username=username, password=password)
         return user

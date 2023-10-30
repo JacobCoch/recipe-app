@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Recipe
+from .models import Recipe, UserProfile
 
 class RecipeAdmin(admin.ModelAdmin):
     list_display = ('name', 'ingredients', 'cooking_time', 'author')
@@ -11,3 +11,4 @@ class RecipeAdmin(admin.ModelAdmin):
         return super().has_delete_permission(request, obj)
 
 admin.site.register(Recipe, RecipeAdmin)
+admin.site.register(UserProfile)
