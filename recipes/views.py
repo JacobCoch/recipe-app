@@ -41,49 +41,33 @@ class RecipeDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-def search(request):
-    template_name = "recipes/recipe.html"
-    form = RecipeSearchForm(request.POST or None)
-
-    if request.method == "POST":
-        recipe_name = request.POST.get("recipe_name")
-        ingredients = request.POST.get("ingredients")
-        chart_type = request.POST.get("chart_type")
-        print(recipe_name, ingredients, chart_type)
-
-        # You can store the search parameters in session or cookies if needed
-        request.session['search_params'] = {
-            'recipe_name': recipe_name,
-            'ingredients': ingredients,
-            'chart_type': chart_type,
-        }
-
-        # Redirect to the RecipeListView to display the filtered results
-        return redirect('recipe')
-
-    context = {"form": form}
-    return render(request, template_name, context)
-
 class RecipeListView(LoginRequiredMixin, ListView):
     model = Recipe
     template_name = "recipes/recipe.html"
+    form = RecipeSearchForm()
 
-    def get_queryset(self):
-        # Retrieve search parameters from session or cookies
-        search_params = self.request.session.get('search_params', {})
-        recipe_name = search_params.get('recipe_name')
-        ingredients = search_params.get('ingredients')
-        chart_type = search_params.get('chart_type')
+    def post(self, request, *args, **kwargs):
+        form = RecipeSearchForm(self.request.POST)
+        if form.is_valid():
+            recipe_name = form.cleaned_data["recipe_name"]
+            ingredients = form.cleaned_data["ingredients"]
+            print(recipe_name, ingredients)
 
-        # Filter the recipes based on search parameters
-        queryset = Recipe.objects.all()
-        if recipe_name:
-            queryset = queryset.filter(name__icontains=recipe_name)
-        if ingredients:
-            queryset = queryset.filter(ingredients__icontains=ingredients)
-        # Add more filters as needed
+            if recipe_name:
+                recipes = Recipe.objects.filter(name__icontains=recipe_name)
+            elif ingredients:
+                recipes = Recipe.objects.filter(ingredients__icontains=ingredients)
+            else:
+                recipes = Recipe.objects.all()
 
-        return queryset
+            context = {
+                "recipes": recipes,
+                "form": form,
+
+            }
+
+            return render(self.request, "recipes/recipe.html", context)
+        
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
