@@ -20,7 +20,6 @@ if not os.path.exists(LOGGING_DIR):
     os.makedirs(LOGGING_DIR)
 
 
-
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
@@ -162,7 +161,6 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "recipes/static/recipes",
     BASE_DIR / "static/recipe_project",
-
 ]
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"

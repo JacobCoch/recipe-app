@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const dropdownButton = document.getElementById('dropdownMenuButton');
   const dropdownMenu = document.querySelector('.dropdown-menu');
   const likeButtons = document.querySelectorAll('.like-button');
+  const recipeSearchForm = document.getElementById('recipe-search-form');
 
   // Add click event to the custom button to show/hide the dropdown
   dropdownButton.addEventListener('click', () => {
