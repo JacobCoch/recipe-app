@@ -2,9 +2,9 @@ from django.db import models
 from django.urls import reverse
 import logging
 from django.contrib.auth.models import User
+
 # Create your models here.
 from django.db import models
-
 
 
 class Recipe(models.Model):
@@ -13,7 +13,6 @@ class Recipe(models.Model):
     cooking_time = models.IntegerField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     pic = models.ImageField(upload_to="recipes", default="no_picture.jpg")
-
 
     def __str__(self):
         return f"""
@@ -57,18 +56,21 @@ class Recipe(models.Model):
 
     def get_absolute_url(self):
         return reverse("recipes:detail", kwargs={"pk": self.pk})
-    
+
 
 class UserProfile(models.Model):
     # Add custom fields to your user model
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    pic = models.ImageField(upload_to="profile_pics", blank=True, null=True, default="no_picture.jpg")
+    pic = models.ImageField(
+        upload_to="profile_pics", blank=True, null=True, default="no_picture.jpg"
+    )
     bio = models.TextField(blank=True, null=True)
-    fav_recipes = models.ManyToManyField(Recipe, blank=True, related_name="favorited_by")
+    fav_recipes = models.ManyToManyField(
+        Recipe, blank=True, related_name="favorited_by"
+    )
 
     def __str__(self):
         return self.username
-    
+
     def get_absolute_url(self):
         return reverse("recipes:profile", kwargs={"username": self.user.username})
-    

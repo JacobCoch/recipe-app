@@ -4,7 +4,6 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm, SignUpForm
 
 
-
 def success(request):
     logout(request)  # the use pre-defined Django function to logout
     return render(request, "auth/success.html")
