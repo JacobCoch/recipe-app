@@ -19,7 +19,7 @@ LOGGING_DIR = "/code/logs/A2_Recipe_App"  # Define a directory for log files
 if not os.path.exists(LOGGING_DIR):
     os.makedirs(LOGGING_DIR)
 
-AUTH_USER_MODEL = 'users.CustomUser'
+
 
 LOGGING = {
     "version": 1,
@@ -86,7 +86,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # recipe_project related apps
     "recipes",
-    "users",
     "bootstrap5",
 ]
 
@@ -163,7 +162,7 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "recipes/static/recipes",
     BASE_DIR / "static/recipe_project",
-    BASE_DIR / "users/static/users"
+
 ]
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
