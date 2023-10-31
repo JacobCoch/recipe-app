@@ -1,19 +1,24 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.views.generic import DetailView, ListView, CreateView
-from .models import Recipe
+import base64
+from io import BytesIO
+
+import matplotlib
+import matplotlib.pyplot as plt
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.views.generic.edit import FormView
-from .forms import RecipeForm, FavoriteRecipeForm, RecipeSearchForm
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
-import matplotlib.pyplot as plt
-from io import BytesIO
-import base64
-import pandas as pd
 from django.db.models import Q
+from django.shortcuts import get_object_or_404, redirect, render
+from django.views.generic import CreateView, DetailView, ListView
+
+from .models import Recipe
+
+matplotlib.use("Agg")
 import random
-import logging
+
+import pandas as pd
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+from .forms import FavoriteRecipeForm, RecipeForm, RecipeSearchForm
 
 
 class HomeView(LoginRequiredMixin, ListView):
@@ -41,81 +46,79 @@ class RecipeDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class RecipeListView(LoginRequiredMixin, ListView):
+class RecipeListView(ListView):
     model = Recipe
     template_name = "recipes/recipe.html"
     form = RecipeSearchForm()
-
-    def post(self, request, *args, **kwargs):
-        form = RecipeSearchForm(self.request.POST)
-        if form.is_valid():
-            recipe_name = form.cleaned_data["recipe_name"]
-            ingredients = form.cleaned_data["ingredients"]
-            print(recipe_name, ingredients)
-
-            if recipe_name:
-                recipes = Recipe.objects.filter(name__icontains=recipe_name)
-            elif ingredients:
-                recipes = Recipe.objects.filter(ingredients__icontains=ingredients)
-            else:
-                recipes = Recipe.objects.all()
-
-            context = {
-                "recipes": recipes,
-                "form": form,
-
-            }
-
-            return render(self.request, "recipes/recipe.html", context)
-        
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         all_recipes = Recipe.objects.all()
         context["recipes"] = all_recipes
+
+        # Generate the graph here
+        x = [recipe.name for recipe in all_recipes]
+        y = [recipe.cooking_time for recipe in all_recipes]
+        chart = self.get_plot(x, y)
+        context["chart"] = chart
+
         return context
 
+    def get_plot(self, x, y):
+        buffer = BytesIO()
+        plt.switch_backend("AGG")
+        plt.figure(figsize=(10, 5))
+        plt.title("Recipe Chart")
+        plt.bar(x, y)
+        plt.xticks(rotation=45)
+        plt.xlabel("Recipes")
+        plt.ylabel("Cooking Time")
+        plt.tight_layout()
+        plt.savefig(buffer, format="png")
+        buffer.seek(0)
+        image_png = buffer.getvalue()
+        graph = base64.b64encode(image_png).decode("utf-8")
+        buffer.close()
+        return graph
 
-"""
-def render_chart(request, chart_type, data, **kwargs):
-    plt.switch_backend("AGG")
-    fig = plt.figure(figsize=(12, 8), dpi=100)
-    ax = fig.add_subplot(111)
+    def post(self, request, *args, **kwargs):
+        form = RecipeSearchForm(self.request.POST)
 
-    if chart_type == "#1":
-        plt.title("Cooking Time by Recipe", fontsize=20)
-        plt.bar(data["title"], data["cooking_time"])
-        plt.xlabel("Recipes", fontsize=16)
-        plt.ylabel("Cooking Time (min)", fontsize=16)
-    elif chart_type == "#2":
-        plt.title("Recipes Cooking Time Comparison", fontsize=20)
-        labels = kwargs.get("labels")
-        plt.pie(data["cooking_time"], labels=None, autopct="%1.1f%%")
-        plt.legend(
-            data["title"],
-            loc="upper right",
-            bbox_to_anchor=(1.0, 1.0),
-            fontsize=12,
-        )
-    elif chart_type == "#3":
-        plt.title("Cooking Time by Recipe", fontsize=20)
-        x_values = data["title"].to_numpy()
-        y_values = data["cooking_time"].to_numpy()
-        plt.plot(x_values, y_values)
-        plt.xlabel("Recipes", fontsize=16)
-        plt.ylabel("Cooking Time (min)", fontsize=16)
-    else:
-        print("Unknown chart type.")
+        if form.is_valid():
+            recipe_name = form.cleaned_data["recipe_name"]
+            ingredients = form.cleaned_data["ingredients"]
 
-    plt.tight_layout(pad=3.0)
+            recipes = Recipe.objects.all()
 
-    buffer = BytesIO()
-    plt.savefig(buffer, format="png")
-    buffer.seek(0)
-    chart_image = base64.b64encode(buffer.read()).decode("utf-8")
+            if recipe_name:
+                recipes = recipes.filter(Q(name__icontains=recipe_name))
 
-    return chart_image
-"""
+            if ingredients:
+                recipes = recipes.filter(Q(ingredients__icontains=ingredients))
+
+            if not recipe_name and not ingredients:
+                recipes = Recipe.objects.all()
+
+            context = {
+                "recipes": recipes,
+                "form": form,
+            }
+
+            if not recipes:
+                messages.info(self.request, "No recipes found")
+
+            # Update the graph based on the filtered recipes
+            x = [recipe.name for recipe in recipes]
+            y = [recipe.cooking_time for recipe in recipes]
+            chart = self.get_plot(x, y)
+            context["chart"] = chart
+
+            return render(self.request, "recipes/recipe.html", context)
+
+    def graph_view(request):
+        # You can access the chart within the context here
+        chart = request.context["chart"]
+        return render(request, "recipes/recipe.html", {"chart": chart})
 
 
 class AddRecipe(LoginRequiredMixin, CreateView):
@@ -139,12 +142,34 @@ def delete_recipe(request, recipe_id):
 
     if request.user == recipe.author:
         if request.method == "POST":
-            recipe.delete()
-            return redirect("recipes:recipe")
-    else:
-        # Handle cases where the user is not the author (you can redirect or show an error)
-        pass
+            # Check for a confirmation parameter sent via POST
+            confirmation = request.POST.get("confirmation")
+
+            if confirmation == "yes":
+                # User has confirmed the deletion
+                recipe.delete()
+                messages.success(request, "Recipe deleted successfully.")
+                return redirect("recipes:recipe")
+            else:
+                # User canceled the deletion
+                messages.info(request, "Recipe deletion canceled.")
+                return redirect("recipes:recipe")
     return redirect("recipes:recipe")
+
+
+@login_required
+def edit_recipe(request,recipe_id):
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
+
+    if request.user == recipe.author:
+        if request.method == "POST":
+            recipe_form = RecipeForm(request.POST, instance=recipe)
+            if recipe_form.is_valid():
+                recipe_form.save()
+                return redirect("recipes:detail", pk=recipe_id)
+    else:
+        pass
+    return redirect("recipes:detail", pk=recipe_id)
 
 
 @login_required

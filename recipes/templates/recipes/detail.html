@@ -87,15 +87,34 @@
     </nav>
     <div class="main-container">
       <div class="action-buttons">
-        <button>Edit Recipe</button>
         {% if request.user == recipe.author %}
+        <form method="post" action="{% url 'recipes:edit_recipe' recipe.id %}">
+          {% csrf_token %}
+
+          <button
+            type="button"
+            class="edit-recipe-button"
+            data-recipe-id="{{ recipe.id }}"
+          >
+            Edit Recipe
+          </button>
+        </form>
+        {% endif %} {% if request.user == recipe.author %}
         <form
           method="post"
           action="{% url 'recipes:delete_recipe' recipe.id %}"
         >
           {% csrf_token %}
 
-          <button type="submit">Delete Recipe</button>
+          <button id="delete-recipe-button" type="submit">Delete Recipe</button>
+          <div id="delete-recipe-modal" class="modal">
+            <div class="modal-content">
+              <h2>Confirm Deletion</h2>
+              <p>Are you sure you want to delete this recipe?</p>
+              <button id="confirm-delete">Yes, Delete</button>
+              <button id="cancel-delete">Cancel</button>
+            </div>
+          </div>
         </form>
         {% endif %}
       </div>
@@ -109,6 +128,17 @@
           <b>Cooking Time: </b> {{ recipe.cooking_time }} (minutes)<br />
           <b>Difficulty: </b> {{ difficulty }}<br />
         </div>
+
+        <!-- Edit form (initially hidden) -->
+        <form
+          method="post"
+          action="{% url 'recipes:edit_recipe' recipe.id %}"
+          class="edit-recipe-form"
+          style="display: none"
+        >
+          {% csrf_token %} {{ form.as_p }}
+          <button type="submit">Save Changes</button>
+        </form>
       </div>
     </div>
   </body>

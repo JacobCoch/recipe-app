@@ -1,10 +1,9 @@
-from django.db import models
-from django.urls import reverse
 import logging
-from django.contrib.auth.models import User
 
+from django.contrib.auth.models import User
 # Create your models here.
 from django.db import models
+from django.urls import reverse
 
 
 class Recipe(models.Model):

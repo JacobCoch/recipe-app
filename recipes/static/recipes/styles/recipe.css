@@ -89,6 +89,13 @@ h1 {
   flex: 1;
   margin: 10px 10px;
   justify-content: space-between; /* Distribute items evenly in a row */
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0, 0, 0, 0.266),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.263);
+  background-color: rgb(19, 19, 151);
+  border-radius: 2rem;
+  color: #fff;
 }
 
 .recipe {
@@ -139,9 +146,10 @@ h1 {
     }
   }
 }
-@media screen and (max-width: 976px) {
+@media screen and (max-width: 1668px) {
   .recipe-container {
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -160,14 +168,14 @@ h1 {
   text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
   background: linear-gradient(
     92.88deg,
-    rgb(0, 0, 83) 9.16%,
-    rgb(0, 0, 130) 43.89%,
-    rgb(0, 0, 175) 64.72%
+    rgb(196, 196, 255) 9.16%,
+    rgb(133, 133, 255) 43.89%,
+    rgb(98, 98, 255) 64.72%
   );
   transition: all 0.5s ease 0s;
 }
 .recipe .details-button:hover {
-  box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+  box-shadow: rgba(118, 108, 199, 0.5) 0px 1px 40px;
   transition: all 0.1s ease 0s;
   color: #fff;
 }
@@ -241,6 +249,7 @@ h1 {
 }
 
 .like-button {
+  color: #fff;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -253,13 +262,45 @@ h1 {
 }
 
 .recipe-search-form {
-  flex: 0 0 400px; /* Fixed width for the form container */
+  flex: 0 0 700px; /* Fixed width for the form container */
   padding: 1rem;
   margin: 1rem;
 }
 
 #recipe-search-form {
   display: flex;
+  padding: 1rem;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.recipe-input {
+  width: 50%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.graph-container img {
+  max-width: 100%; /* Set the maximum width to 100% of the container */
+  height: auto; /* Allow the height to adjust accordingly */
+  min-width: 400px;
+  display: block;
+  margin: 1rem auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 1060px) {
+  .recipe-search-form {
+    min-width: auto;
+  }
+}
+
+.messages {
+  font-size: 32px;
+  list-style-type: none;
+  margin-top: 2rem;
 }

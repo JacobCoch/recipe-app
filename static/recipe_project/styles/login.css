@@ -1,16 +1,11 @@
-body,
-html {
+.body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-body.background-image {
-  background-image: url(../images/honey-background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+.logo {
+  width: 200px;
 }
 
 .title {
@@ -26,8 +21,15 @@ body.background-image {
   }
 }
 
-.login-container {
-  background-color: rgba(0, 0, 0, 0.5);
+#content-container {
+  background-color: lightblue;
+}
+
+.message-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .login-text {
@@ -87,4 +89,28 @@ body.background-image {
 .login-btn:hover {
   background-color: #0056b3;
   cursor: pointer;
+}
+
+.image-content {
+  padding: 0;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .message-content {
+    text-align: center;
+  }
+}
+
+#main-image {
+  background-image: url('/media/recipes/vegie_pizza.jpg');
+  background-size: cover;
+}
+
+.signup-link {
+  margin-top: 2rem;
 }

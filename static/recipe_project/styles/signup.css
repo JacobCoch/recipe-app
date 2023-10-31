@@ -1,16 +1,11 @@
-body,
-html {
+.body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-body.background-image {
-  background-image: url(../images/honey-background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+.logo {
+  width: 200px;
 }
 
 .title {
@@ -26,8 +21,15 @@ body.background-image {
   }
 }
 
-.signup-container {
-  background-color: rgba(0, 0, 0, 0.5);
+#content-container {
+  background-color: lightpink;
+}
+
+.message-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .signup-text {
@@ -41,25 +43,22 @@ body.background-image {
   .signup-text {
     font-size: 16px;
   }
-  .login-link {
-    font-size: 16px;
-  }
-  .signup-btn {
-    font-size: 14px;
-  }
 }
 
 .signup-btn {
   width: 6rem;
 }
 
+.redirect-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .error-message {
   color: red;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 10px;
-  text-align: center;
-  margin: 0 auto;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .input-control {
@@ -79,15 +78,8 @@ body.background-image {
 .error-message {
   color: red;
   margin-top: 5px;
-  display: flex;
-  justify-content: center;
 }
 
-.redirect-buttons {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
 /* Style the button as well */
 .signup-btn {
   background-color: #007bff;
@@ -95,6 +87,8 @@ body.background-image {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+
+  margin-top: 2rem;
 }
 
 .signup-btn:hover {
@@ -102,7 +96,26 @@ body.background-image {
   cursor: pointer;
 }
 
+.image-content {
+  padding: 0;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .message-content {
+    text-align: center;
+  }
+}
+
+#main-image {
+  background-image: url('/media/recipes/ricey_greens.jpg');
+  background-size: cover;
+}
+
 .login-link {
-  color: rgb(0, 0, 83);
-  margin-left: 10px;
+  margin-top: 2rem;
 }
