@@ -108,6 +108,13 @@
         </div>
         <div class="main-content">
           <div class="recipe-container">
+            <ul class="messages">
+              {% for message in messages %}
+              <li {% if message.tags %} class="{{ message.tags }}">
+                {{ message }}
+              </li>
+              {% endif %} {% endfor %}
+            </ul>
             {% for recipe in recipes %}
             <div class="recipe">
               <img src="{{recipe.pic.url}}" width="100" height="100" />
@@ -133,13 +140,13 @@
           </div>
           <div class="recipe-search-form">
             <form
-              class="recipe-input"
               action=""
               method="post"
               id="recipe-search-form"
               enctype="multipart/form-data"
             >
               <input
+                class="recipe-input"
                 type="text"
                 name="recipe_name"
                 placeholder="Search by Recipe Name"

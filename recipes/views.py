@@ -1,20 +1,24 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from django.views.generic import DetailView, ListView, CreateView
-from .models import Recipe
-from django.db.models import Q
-from django.contrib.auth.models import User
-from io import BytesIO
 import base64
-import matplotlib.pyplot as plt
+from io import BytesIO
+
 import matplotlib
-matplotlib.use('Agg')
-from .forms import RecipeForm, FavoriteRecipeForm, RecipeSearchForm
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.decorators import login_required
+import matplotlib.pyplot as plt
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.db.models import Q
+from django.shortcuts import get_object_or_404, redirect, render
+from django.views.generic import CreateView, DetailView, ListView
+
+from .models import Recipe
+
+matplotlib.use("Agg")
+import random
 
 import pandas as pd
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-import random
+from .forms import FavoriteRecipeForm, RecipeForm, RecipeSearchForm
 
 
 class HomeView(LoginRequiredMixin, ListView):
@@ -62,18 +66,18 @@ class RecipeListView(ListView):
 
     def get_plot(self, x, y):
         buffer = BytesIO()
-        plt.switch_backend('AGG')
+        plt.switch_backend("AGG")
         plt.figure(figsize=(10, 5))
-        plt.title('recipe chart')
-        plt.plot(x, y)
+        plt.title("Recipe Chart")
+        plt.bar(x, y)
         plt.xticks(rotation=45)
-        plt.xlabel('recipe')
-        plt.ylabel('cooking time')
+        plt.xlabel("Recipes")
+        plt.ylabel("Cooking Time")
         plt.tight_layout()
-        plt.savefig(buffer, format='png')
+        plt.savefig(buffer, format="png")
         buffer.seek(0)
         image_png = buffer.getvalue()
-        graph = base64.b64encode(image_png).decode('utf-8')
+        graph = base64.b64encode(image_png).decode("utf-8")
         buffer.close()
         return graph
 
@@ -92,10 +96,16 @@ class RecipeListView(ListView):
             if ingredients:
                 recipes = recipes.filter(Q(ingredients__icontains=ingredients))
 
+            if not recipe_name and not ingredients:
+                recipes = Recipe.objects.all()
+
             context = {
                 "recipes": recipes,
                 "form": form,
             }
+
+            if not recipes:
+                messages.info(self.request, "No recipes found")
 
             # Update the graph based on the filtered recipes
             x = [recipe.name for recipe in recipes]
@@ -108,7 +118,7 @@ class RecipeListView(ListView):
     def graph_view(request):
         # You can access the chart within the context here
         chart = request.context["chart"]
-        return render(request, 'recipes/recipe.html', {'chart': chart})
+        return render(request, "recipes/recipe.html", {"chart": chart})
 
 
 class AddRecipe(LoginRequiredMixin, CreateView):
@@ -132,12 +142,34 @@ def delete_recipe(request, recipe_id):
 
     if request.user == recipe.author:
         if request.method == "POST":
-            recipe.delete()
-            return redirect("recipes:recipe")
-    else:
-        # Handle cases where the user is not the author (you can redirect or show an error)
-        pass
+            # Check for a confirmation parameter sent via POST
+            confirmation = request.POST.get("confirmation")
+
+            if confirmation == "yes":
+                # User has confirmed the deletion
+                recipe.delete()
+                messages.success(request, "Recipe deleted successfully.")
+                return redirect("recipes:recipe")
+            else:
+                # User canceled the deletion
+                messages.info(request, "Recipe deletion canceled.")
+                return redirect("recipes:recipe")
     return redirect("recipes:recipe")
+
+
+@login_required
+def edit_recipe(request,recipe_id):
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
+
+    if request.user == recipe.author:
+        if request.method == "POST":
+            recipe_form = RecipeForm(request.POST, instance=recipe)
+            if recipe_form.is_valid():
+                recipe_form.save()
+                return redirect("recipes:detail", pk=recipe_id)
+    else:
+        pass
+    return redirect("recipes:detail", pk=recipe_id)
 
 
 @login_required

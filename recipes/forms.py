@@ -1,4 +1,5 @@
 from django import forms
+
 from .models import Recipe
 
 
@@ -6,8 +7,6 @@ class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = ["name", "cooking_time", "pic", "ingredients"]
-
-
 
 
 class RecipeSearchForm(forms.Form):
@@ -21,7 +20,6 @@ class RecipeSearchForm(forms.Form):
         max_length=100,
         required=False,
     )
-
 
 
 class FavoriteRecipeForm(forms.ModelForm):

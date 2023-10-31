@@ -146,9 +146,10 @@ h1 {
     }
   }
 }
-@media screen and (max-width: 976px) {
+@media screen and (max-width: 1668px) {
   .recipe-container {
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -275,7 +276,7 @@ h1 {
   margin: 0 auto;
 }
 .recipe-input {
-  width: 70%;
+  width: 50%;
   padding: 0.5rem;
   margin: 0.5rem 0;
   border: 1px solid #ccc;
@@ -287,5 +288,19 @@ h1 {
   height: auto; /* Allow the height to adjust accordingly */
   min-width: 400px;
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 1060px) {
+  .recipe-search-form {
+    min-width: auto;
+  }
+}
+
+.messages {
+  font-size: 32px;
+  list-style-type: none;
+  margin-top: 2rem;
 }
