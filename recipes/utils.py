@@ -2,61 +2,41 @@ from io import BytesIO
 import base64
 import matplotlib.pyplot as plt
 
-
-def get_graph():
-    # create a BytesIO buffer for the image
-    buffer = BytesIO()
-
-    # create a plot with a bytesIO object as a file-like object. Set format to png
-    plt.savefig(buffer, format="png")
-
-    # set cursor to the beginning of the stream
-    buffer.seek(0)
-
-    # retrieve the content of the file
-    image_png = buffer.getvalue()
-
-    # encode the bytes-like object
-    graph = base64.b64encode(image_png)
-
-    # decode to get the string as output
-    graph = graph.decode("utf-8")
-
-    # free up the memory of buffer
-    buffer.close()
-
-    # return the image/graph
-    return graph
-
-
-def get_chart(chart_type, data, **kwargs):
-    # switch plot backend to AGG (Anti-Grain Geometry) - to write to file
-    # AGG is preferred solution to write PNG files
+def render_chart(request, chart_type, data, **kwargs):
     plt.switch_backend("AGG")
+    fig = plt.figure(figsize=(12, 8), dpi=100)
+    ax = fig.add_subplot(111)
 
-    # specify figure size
-    fig = plt.figure(figsize=(6, 3))
-
-    # select chart_type based on user input from the form
     if chart_type == "#1":
-        # plot bar chart between date on x-axis and quantity on y-axis
-        plt.bar(data["date_created"], data["quantity"])
-
+        plt.title("Cooking Time by Recipe", fontsize=20)
+        plt.bar(data["title"], data["cooking_time"])
+        plt.xlabel("Recipes", fontsize=16)
+        plt.ylabel("Cooking Time (min)", fontsize=16)
     elif chart_type == "#2":
-        # generate pie chart based on the price.
-        # The book titles are sent from the view as labels
+        plt.title("Recipes Cooking Time Comparison", fontsize=20)
         labels = kwargs.get("labels")
-        plt.pie(data["price"], labels=labels)
-
+        plt.pie(data["cooking_time"], labels=None, autopct="%1.1f%%")
+        plt.legend(
+            data["title"],
+            loc="upper right",
+            bbox_to_anchor=(1.0, 1.0),
+            fontsize=12,
+        )
     elif chart_type == "#3":
-        # plot line chart based on date on x-axis and price on y-axis
-        plt.plot(data["date_created"], data["price"])
+        plt.title("Cooking Time by Recipe", fontsize=20)
+        x_values = data["title"].to_numpy()  
+        y_values = data["cooking_time"].to_numpy()  
+        plt.plot(x_values, y_values)
+        plt.xlabel("Recipes", fontsize=16)
+        plt.ylabel("Cooking Time (min)", fontsize=16)
     else:
-        print("unknown chart type")
+        print("Unknown chart type.")
 
-    # specify layout details
-    plt.tight_layout()
+    plt.tight_layout(pad=3.0)
 
-    # render the graph to file
-    chart = get_graph()
-    return chart
+    buffer = BytesIO()
+    plt.savefig(buffer, format="png")
+    buffer.seek(0)
+    chart_image = base64.b64encode(buffer.read()).decode("utf-8")
+
+    return chart_image
