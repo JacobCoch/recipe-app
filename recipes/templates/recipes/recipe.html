@@ -133,6 +133,7 @@
           </div>
           <div class="recipe-search-form">
             <form
+              class="recipe-input"
               action=""
               method="post"
               id="recipe-search-form"
@@ -144,21 +145,24 @@
                 placeholder="Search by Recipe Name"
               />
               <input
+                class="recipe-input"
                 type="text"
                 name="ingredients"
                 placeholder="Search by ingredient"
               />
-              <select name="chart_type">
-                <option value="#1">Pie Chart</option>
-                <option value="#2">Bar Chart</option>
-                <option value="#3">Line Chart</option>
-              </select>
+
               {% csrf_token %}
               <button type="submit" class="btn search-button">
                 <i class="fas fa-search"></i> Search
               </button>
-              <img src="{% static chart %}" alt="Chart" />
             </form>
+            <div class="graph-container">
+              {% if chart %}
+
+              <img src="data:image/png;base64,{{ chart|safe }}" />
+
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
