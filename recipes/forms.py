@@ -20,13 +20,3 @@ class RecipeSearchForm(forms.Form):
         max_length=100,
         required=False,
     )
-
-
-class FavoriteRecipeForm(forms.ModelForm):
-    class Meta:
-        model = Recipe
-        fields = (
-            []
-        )  # This can be an empty list, as you don't need any fields from the Recipe model
-
-    recipe_id = forms.IntegerField(widget=forms.HiddenInput())
