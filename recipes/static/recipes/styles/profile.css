@@ -47,3 +47,117 @@ body {
     display: none;
   }
 }
+
+h1 {
+  font-style: italic;
+  font-size: 40px;
+  margin: 2rem;
+}
+
+.like-button {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Style for the "Like" button when it's liked */
+.like-button.liked {
+  color: red; /* Change the color when the button is liked */
+}
+
+.recipe {
+  flex: 0 0 calc(25% - 20px); /* 4 columns with a 20px gap; Adjust as needed */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.recipe img {
+  width: 100%; /* Make the image width responsive to its container */
+  max-height: 300px; /* Set a maximum height */
+  object-fit: cover;
+  border-radius: 2rem;
+  min-width: 260px;
+}
+
+.recipe-buttons {
+  display: flex;
+}
+
+.recipe .details-button:hover {
+  background-color: #fff;
+  color: rgb(0, 0, 83);
+}
+
+/* Media query for responsive layout */
+@media screen and (max-width: 800px) {
+  .recipe {
+    flex: 0 1 calc(33.33% - 10px); /* 3 columns with a 20px gap */
+  }
+
+  @media screen and (max-width: 600px) {
+    .recipe {
+      flex: 0 1 calc(50% - 10px); /* 2 columns with a 20px gap */
+    }
+
+    @media screen and (max-width: 400px) {
+      .recipe {
+        flex: 0 1 calc(100% - 10px); /* 1 column with a 20px gap */
+      }
+    }
+  }
+}
+@media screen and (max-width: 1668px) {
+  .recipe-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.recipe .details-button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 30px;
+  padding: 0px 15px;
+  margin-right: 65px;
+  text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+  background: linear-gradient(
+    92.88deg,
+    rgb(196, 196, 255) 9.16%,
+    rgb(133, 133, 255) 43.89%,
+    rgb(98, 98, 255) 64.72%
+  );
+  transition: all 0.5s ease 0s;
+}
+.recipe .details-button:hover {
+  box-shadow: rgba(118, 108, 199, 0.5) 0px 1px 40px;
+  transition: all 0.1s ease 0s;
+  color: #fff;
+}
+
+.recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex: 1;
+  margin: 10px 10px;
+  justify-content: space-between; /* Distribute items evenly in a row */
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0, 0, 0, 0.266),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.263);
+  background-color: rgb(19, 19, 151);
+  border-radius: 2rem;
+  color: #fff;
+}

@@ -1,5 +1,6 @@
 import base64
 from io import BytesIO
+from typing import Any
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -9,7 +10,7 @@ from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import CreateView, DetailView, ListView
 
-from .models import Recipe
+from .models import Recipe, UserProfile
 
 matplotlib.use("Agg")
 import random
@@ -18,7 +19,7 @@ import pandas as pd
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .forms import FavoriteRecipeForm, RecipeForm, RecipeSearchForm
+from .forms import RecipeForm, RecipeSearchForm
 
 
 class HomeView(LoginRequiredMixin, ListView):
@@ -176,21 +177,29 @@ def edit_recipe(request,recipe_id):
 def faved_recipe(request, recipe_id):
     user = request.user
     recipe = Recipe.objects.get(pk=recipe_id)
-    recipe_favorites = recipe.users_favorite.all()
+    recipe_favorites = recipe.fav_recipes.all()
+    print(user, recipe, recipe_favorites)
 
-    context = {
-        "recipe": recipe,
-        "recipe_favorites": recipe_favorites,
-    }
+    if recipe.users_favorites.filter(pk=user.pk).exists():
+        recipe.users_favorites.remove(user)
+        messages.info(request, "Recipe removed from favorites.")
+    else:
+        recipe.users_favorites.add(user)
+        messages.success(request, "Recipe added to favorites.")
+
+    print(recipe.users_favorites.all())
+
+
     
-    return render("recipes/profile.html", context, pk=recipe_id)
+    
+    return redirect("recipes:profile", username=request.user.username)
    
     
 
 
 class Profile(LoginRequiredMixin, DetailView):
-    model = User
+    model = UserProfile
     template_name = "recipes/profile.html"
     context_object_name = "user"
-    slug_field = "username"
+    slug_field = "user__username"
     slug_url_kwarg = "username"

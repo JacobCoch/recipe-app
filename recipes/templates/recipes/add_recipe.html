@@ -35,7 +35,7 @@
         <li class="nav-item">
           <a
             class="nav-link"
-            href="{% url 'recipes:profile' username=user.username %}"
+            href="{% url 'recipes:profile' username=request.user.username %}"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               height="24"
@@ -80,7 +80,7 @@
           <div class="dropdown-divider"></div>
           <a
             class="dropdown-item"
-            href="{% url 'recipes:profile' username=user.username %}"
+            href="{% url 'recipes:profile' username=request.user.username %}"
             >Profile</a
           >
           <a class="dropdown-item" href="{% url 'success' %}">Logout</a>
