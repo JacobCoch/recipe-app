@@ -91,9 +91,9 @@
       {% else %}
       <p>No profile picture available.</p>
       {% endif %}
-      <p>{{ request.user.bio }}</p>
+      <p>{{user.bio}}</p>
       <ul>
-        {% for recipe in request.user.liked_recipes.all %}
+        {% for recipe in recipe_favorites %}
         <li>{{ recipe.name }}</li>
         {% endfor %}
       </ul>

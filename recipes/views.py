@@ -174,18 +174,18 @@ def edit_recipe(request,recipe_id):
 
 @login_required
 def faved_recipe(request, recipe_id):
-    if request.method == "POST":
-        form = FavoriteRecipeForm(request.POST)
-        if form.is_valid():
-            recipe_id = form.cleaned_data("recipe_id")
-            user = request.user
-            recipe = Recipe.objects.get(pk=recipe_id)
+    user = request.user
+    recipe = Recipe.objects.get(pk=recipe_id)
+    recipe_favorites = recipe.users_favorite.all()
 
-            if recipe.users_favorite.filter(pk=user.pk).exists():
-                recipe.users_favorite.remove(user)
-            else:
-                recipe.users_favorite.add(user)
-        return redirect("recipes:detail", pk=recipe_id)
+    context = {
+        "recipe": recipe,
+        "recipe_favorites": recipe_favorites,
+    }
+    
+    return render("recipes/profile.html", context, pk=recipe_id)
+   
+    
 
 
 class Profile(LoginRequiredMixin, DetailView):

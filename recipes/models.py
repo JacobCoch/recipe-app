@@ -65,11 +65,11 @@ class UserProfile(models.Model):
     )
     bio = models.TextField(blank=True, null=True)
     fav_recipes = models.ManyToManyField(
-        Recipe, blank=True, related_name="favorited_by"
+        Recipe, blank=True, related_name="users_favorites"
     )
 
     def __str__(self):
-        return self.username
+        return self.user.username
 
     def get_absolute_url(self):
         return reverse("recipes:profile", kwargs={"username": self.user.username})
