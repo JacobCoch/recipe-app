@@ -55,16 +55,12 @@ h1 {
 }
 
 .like-button {
-  color: #fff;
+  color: red;
   background-color: transparent;
   border: none;
   cursor: pointer;
   transition: color 0.3s ease; /* Smooth color transition */
-}
-
-/* Style for the "Like" button when it's liked */
-.like-button.liked {
-  color: red; /* Change the color when the button is liked */
+  box-shadow: none !important;
 }
 
 .recipe {
@@ -160,4 +156,12 @@ h1 {
   background-color: rgb(19, 19, 151);
   border-radius: 2rem;
   color: #fff;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 2rem;
 }

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Recipe, UserProfile
+from .models import Recipe, CustomUser
 
 
 class RecipeAdmin(admin.ModelAdmin):
@@ -13,5 +13,7 @@ class RecipeAdmin(admin.ModelAdmin):
         return super().has_delete_permission(request, obj)
 
 
+
+
 admin.site.register(Recipe, RecipeAdmin)
-admin.site.register(UserProfile)
+admin.site.register(CustomUser)

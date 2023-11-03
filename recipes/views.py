@@ -9,8 +9,8 @@ from django.contrib.auth.models import User
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import CreateView, DetailView, ListView
-
-from .models import Recipe, UserProfile
+from django.http import JsonResponse
+from .models import Recipe, CustomUser
 
 matplotlib.use("Agg")
 import random
@@ -176,30 +176,30 @@ def edit_recipe(request,recipe_id):
 @login_required
 def faved_recipe(request, recipe_id):
     user = request.user
-    recipe = Recipe.objects.get(pk=recipe_id)
-    recipe_favorites = recipe.fav_recipes.all()
-    print(user, recipe, recipe_favorites)
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
 
-    if recipe.users_favorites.filter(pk=user.pk).exists():
-        recipe.users_favorites.remove(user)
-        messages.info(request, "Recipe removed from favorites.")
+
+    if user.fav_recipes.filter(pk=recipe_id).exists():
+        user.fav_recipes.remove(recipe)
+        is_liked = False
     else:
-        recipe.users_favorites.add(user)
-        messages.success(request, "Recipe added to favorites.")
-
-    print(recipe.users_favorites.all())
+        user.fav_recipes.add(recipe)
+        is_liked = True
 
 
+    response_data = {
+        "is_liked": is_liked,
+    }
     
-    
-    return redirect("recipes:profile", username=request.user.username)
+    return JsonResponse(response_data)
    
     
 
 
 class Profile(LoginRequiredMixin, DetailView):
-    model = UserProfile
+    model = CustomUser
     template_name = "recipes/profile.html"
     context_object_name = "user"
-    slug_field = "user__username"
+    slug_field = "username"
     slug_url_kwarg = "username"
+
