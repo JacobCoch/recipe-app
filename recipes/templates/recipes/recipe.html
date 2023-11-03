@@ -125,15 +125,17 @@
                 >
                   Details
                 </button>
-                <form method="post">
+                <form id="recipe-fav-form">
                   {% csrf_token %}
-                  <input
-                    type="hidden"
-                    name="recipe_id"
-                    value="{{ recipe.id }}"
-                  />
-                  <button type="submit" class="btn like-button">
+                  <button
+                    class="btn like-button"
+                    data-recipe-id="{{ recipe.id }}"
+                  >
+                    {% if recipe in user.fav_recipes.all %}
                     <i class="fas fa-heart"></i>
+                    {% else %}
+                    <i class="far fa-heart"></i>
+                    {% endif %}
                   </button>
                 </form>
               </div>

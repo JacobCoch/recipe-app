@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.models import User
+from django.conf import settings
 
 
 class PasswordField(forms.CharField):
@@ -38,5 +38,5 @@ class SignUpForm(forms.Form):
         username = self.cleaned_data.get("username")
         password = self.cleaned_data.get("password")
 
-        user = User.objects.create_user(username=username, password=password)
+        user = settings.AUTH_USER_MODEL.objects.create_user(username=username, password=password)
         return user

@@ -87,7 +87,11 @@
     <div>
       <h1>Hello, {{user}}</h1>
       {% if user.pic %}
-      <img src="{{ request.user.pic.url }}" alt="Profile Picture" />
+      <img
+        src="{{ request.user.pic.url }}"
+        alt="Profile Picture"
+        class="profile-image"
+      />
       {% else %}
       <p>No profile picture available.</p>
       {% endif %}
@@ -109,11 +113,19 @@
                 Details
               </button>
 
-              {% csrf_token %}
-
-              <button type="submit" class="btn like-button">
-                <i class="fas fa-heart"></i>
-              </button>
+              <form id="recipe-fav-form">
+                {% csrf_token %}
+                <button
+                  class="btn like-button"
+                  data-recipe-id="{{ recipe.id }}"
+                >
+                  {% if recipe in user.fav_recipes.all %}
+                  <i class="fas fa-heart"></i>
+                  {% else %}
+                  <i class="far fa-heart"></i>
+                  {% endif %}
+                </button>
+              </form>
             </div>
           </div>
 

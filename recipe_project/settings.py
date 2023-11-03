@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 
+AUTH_USER_MODEL = 'recipes.CustomUser'
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOGGING_DIR = "/code/logs/A2_Recipe_App"  # Define a directory for log files
 
