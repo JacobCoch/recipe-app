@@ -2,12 +2,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const dropdownButton = document.getElementById('dropdownMenuButton');
   const dropdownMenu = document.querySelector('.dropdown-menu');
   const deleteRecipeButton = document.getElementById('delete-recipe-button');
-  const deleteRecipeModal = document.getElementById('delete-recipe-modal');
   const confirmDeleteButton = document.getElementById('confirm-delete');
   const cancelDeleteButton = document.getElementById('cancel-delete');
   const deleteRecipeForm = document.querySelector('.delete-recipe-form');
+  const deleteRecipeModal = document.getElementById('delete-recipe-modal');
+
+  $(document).ready(function () {
+    $('.edit-recipe-button').click(function () {
+      $('.recipe-info span').attr('contenteditable', 'true');
+      $('.edit-recipe-form').show();
+    });
+  });
 
   deleteRecipeButton.addEventListener('click', () => {
+    // Show the modal when the "Delete Recipe" button is clicked
     deleteRecipeModal.style.display = 'block';
   });
 
@@ -18,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Handle the "Yes, Delete" button click
   confirmDeleteButton.addEventListener('click', () => {
+    // Submit the form
     deleteRecipeForm.submit();
   });
 

@@ -1,17 +1,17 @@
 import logging
-from django.contrib.auth.models import Group, Permission
+
 from django.conf import settings
+from django.contrib.auth.models import AbstractUser, Group, Permission
 # Create your models here.
 from django.db import models
 from django.urls import reverse
-from django.contrib.auth.models import AbstractUser
 
 
 class Recipe(models.Model):
     name = models.CharField(max_length=50)
     ingredients = models.CharField(max_length=255)
     cooking_time = models.IntegerField()
-    author = models.ForeignKey(settings.AUTH_USER_MODEL , on_delete=models.CASCADE)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     pic = models.ImageField(upload_to="recipes", default="no_picture.jpg")
 
     def __str__(self):
@@ -67,20 +67,6 @@ class CustomUser(AbstractUser):
     fav_recipes = models.ManyToManyField(
         Recipe, blank=True, related_name="users_favorites"
     )
-
-
-    # Add related_name to resolve clashes
-    groups = models.ManyToManyField(
-        Group,
-        blank=True,
-        related_name="customuser_set",
-    )
-    user_permissions = models.ManyToManyField(
-        Permission,
-        blank=True,
-        related_name="customuser_set",
-    )
-
 
     def __str__(self):
         return self.username

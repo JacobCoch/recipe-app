@@ -88,47 +88,44 @@
     <div class="main-container">
       <div class="action-buttons">
         {% if request.user == recipe.author %}
-        <form method="post" action="{% url 'recipes:edit_recipe' recipe.id %}">
-          {% csrf_token %}
-
-          <button
-            type="button"
-            class="edit-recipe-button"
-            data-recipe-id="{{ recipe.id }}"
-          >
-            Edit Recipe
-          </button>
-        </form>
-        {% endif %} {% if request.user == recipe.author %}
-        <form
-          method="post"
-          action="{% url 'recipes:delete_recipe' recipe.id %}"
+        <button
+          type="button"
+          class="edit-recipe-button"
+          data-recipe-id="{{ recipe.id }}"
         >
-          {% csrf_token %}
-
-          <button id="delete-recipe-button" type="submit">Delete Recipe</button>
-          <div id="delete-recipe-modal" class="modal">
-            <div class="modal-content">
-              <h2>Confirm Deletion</h2>
-              <p>Are you sure you want to delete this recipe?</p>
+          Edit Recipe
+        </button>
+        {% endif %} {% if request.user == recipe.author %}
+        <button id="delete-recipe-button">Delete Recipe</button>
+        <div id="delete-recipe-modal" class="modal">
+          <div class="modal-content">
+            <h2>Confirm Deletion</h2>
+            <p>Are you sure you want to delete this recipe?</p>
+            <form
+              class="delete-recipe-form"
+              method="post"
+              action="{% url 'recipes:delete_recipe' recipe.id %}"
+            >
+              {% csrf_token %}
               <button id="confirm-delete">Yes, Delete</button>
-              <button id="cancel-delete">Cancel</button>
-            </div>
+            </form>
+            <button id="cancel-delete">Cancel</button>
           </div>
-        </form>
+        </div>
         {% endif %}
       </div>
-      <div class="body-container">
-        <div>
-          <img src="{{ recipe.pic.url }}" class="recipe-image" />
+      <div class="body-and-form-container">
+        <div class="body-container">
+          <div>
+            <img src="{{ recipe.pic.url }}" class="recipe-image" />
+          </div>
+          <div class="recipe-info">
+            <b>Name: </b> {{ recipe.name }}<br />
+            <b>Ingredients: </b> {{ recipe.ingredients }}<br />
+            <b>Cooking Time: </b> {{ recipe.cooking_time }} (minutes)<br />
+            <b>Difficulty: </b> {{ difficulty }}<br />
+          </div>
         </div>
-        <div class="recipe-info">
-          <b>Name: </b> {{ recipe.name }}<br />
-          <b>Ingredients: </b> {{ recipe.ingredients }}<br />
-          <b>Cooking Time: </b> {{ recipe.cooking_time }} (minutes)<br />
-          <b>Difficulty: </b> {{ difficulty }}<br />
-        </div>
-
         <!-- Edit form (initially hidden) -->
         <form
           method="post"
@@ -136,11 +133,30 @@
           class="edit-recipe-form"
           style="display: none"
         >
-          {% csrf_token %} {{ form.as_p }}
+          {% csrf_token %}
+          <input
+            type="text"
+            id="edit-recipe-name"
+            name="name"
+            value="{{ recipe.name }}"
+          />
+          <input
+            type="text"
+            id="edit-recipe-ingredients"
+            name="ingredients"
+            value="{{ recipe.ingredients }}"
+          />
+          <input
+            type="number"
+            id="edit-recipe-cooking-time"
+            name="cooking_time"
+            value="{{ recipe.cooking_time }}"
+          />
           <button type="submit">Save Changes</button>
         </form>
       </div>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="{% static 'scripts/detail.js' %}" defer></script>
 </html>

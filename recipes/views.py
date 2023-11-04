@@ -1,17 +1,17 @@
 import base64
-from io import BytesIO
 import logging
+from io import BytesIO
 from typing import Any
 
 import matplotlib
 import matplotlib.pyplot as plt
 from django.contrib import messages
-
 from django.db.models import Q
+from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import CreateView, DetailView, ListView
-from django.http import HttpRequest, HttpResponse, JsonResponse
-from .models import Recipe, CustomUser
+
+from .models import CustomUser, Recipe
 
 matplotlib.use("Agg")
 import random
@@ -145,22 +145,16 @@ def delete_recipe(request, recipe_id):
     if request.user == recipe.author:
         if request.method == "POST":
             # Check for a confirmation parameter sent via POST
-            confirmation = request.POST.get("confirmation")
-
-            if confirmation == "yes":
-                # User has confirmed the deletion
+            if request.POST:
                 recipe.delete()
-                messages.success(request, "Recipe deleted successfully.")
                 return redirect("recipes:recipe")
             else:
-                # User canceled the deletion
-                messages.info(request, "Recipe deletion canceled.")
-                return redirect("recipes:recipe")
+                return redirect("recipes:detail", pk=recipe_id)
     return redirect("recipes:recipe")
 
 
 @login_required
-def edit_recipe(request,recipe_id):
+def edit_recipe(request, recipe_id):
     recipe = get_object_or_404(Recipe, pk=recipe_id)
 
     if request.user == recipe.author:
@@ -169,8 +163,7 @@ def edit_recipe(request,recipe_id):
             if recipe_form.is_valid():
                 recipe_form.save()
                 return redirect("recipes:detail", pk=recipe_id)
-    else:
-        pass
+
     return redirect("recipes:detail", pk=recipe_id)
 
 
@@ -179,7 +172,6 @@ def faved_recipe(request, recipe_id):
     user = request.user
     recipe = get_object_or_404(Recipe, pk=recipe_id)
 
-
     if user.fav_recipes.filter(pk=recipe_id).exists():
         user.fav_recipes.remove(recipe)
         is_liked = False
@@ -187,26 +179,23 @@ def faved_recipe(request, recipe_id):
         user.fav_recipes.add(recipe)
         is_liked = True
 
-
     response_data = {
         "is_liked": is_liked,
     }
-    
+
     return JsonResponse(response_data)
-   
+
 
 @login_required
 def update_profile_picture(request, username):
-        if request.method == "POST":
-            profile_pic = request.FILES["profile_pic"]
-            request.user.pic = profile_pic
-            request.user.save()
-            print(request.FILES)
-            return redirect("recipes:profile", username=request.user.username)
-        else:
-            return redirect("recipes:profile", username=request.user.username)
-    
-
+    if request.method == "POST":
+        profile_pic = request.FILES["profile_pic"]
+        request.user.pic = profile_pic
+        request.user.save()
+        print(request.FILES)
+        return redirect("recipes:profile", username=request.user.username)
+    else:
+        return redirect("recipes:profile", username=request.user.username)
 
 
 class Profile(LoginRequiredMixin, DetailView):
