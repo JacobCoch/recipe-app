@@ -2,8 +2,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const dropdownButton = document.getElementById('dropdownMenuButton');
   const dropdownMenu = document.querySelector('.dropdown-menu');
   const detailsButtons = document.querySelectorAll('.details-button');
-
+  const updateProfileLink = document.getElementById('update-profile-picture');
   const likeButtons = document.querySelectorAll('.like-button');
+  const fileInput = document.getElementById('file-input');
+
+  updateProfileLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    fileInput.click();
+    console.log('clicked');
+  });
+
+  fileInput.addEventListener('change', function () {
+    this.form.submit(); // Submit the form when a file is selected.
+  });
 
   likeButtons.forEach(function (button) {
     button.addEventListener('click', function (event) {
