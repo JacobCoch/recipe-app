@@ -46,6 +46,7 @@ LOGGING = {
 }
 
 
+
 from pathlib import Path
 
 SECRET_KEY = "django-insecure-h*lvn1*wwi6i&ek=pgw14e(ec7v-=73c13et7(g)*^&iwx#7@&"

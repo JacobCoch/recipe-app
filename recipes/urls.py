@@ -16,4 +16,6 @@ urlpatterns = [
     path("recipe/<int:recipe_id>/edit/", views.edit_recipe, name="edit_recipe"),
     path("recipe/fav/<int:recipe_id>/", views.faved_recipe, name="faved_recipe"),
     path("profile/<slug:username>/", Profile.as_view(), name="profile"),
+    path("profile/<slug:username>/update/", views.update_profile_picture, name="update_profile_picture"),
+    
 ]

@@ -1,15 +1,16 @@
 import base64
 from io import BytesIO
+import logging
 from typing import Any
 
 import matplotlib
 import matplotlib.pyplot as plt
 from django.contrib import messages
-from django.contrib.auth.models import User
+
 from django.db.models import Q
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import CreateView, DetailView, ListView
-from django.http import JsonResponse
+from django.http import HttpRequest, HttpResponse, JsonResponse
 from .models import Recipe, CustomUser
 
 matplotlib.use("Agg")
@@ -193,7 +194,19 @@ def faved_recipe(request, recipe_id):
     
     return JsonResponse(response_data)
    
+
+@login_required
+def update_profile_picture(request, username):
+        if request.method == "POST":
+            profile_pic = request.FILES["profile_pic"]
+            request.user.pic = profile_pic
+            request.user.save()
+            print(request.FILES)
+            return redirect("recipes:profile", username=request.user.username)
+        else:
+            return redirect("recipes:profile", username=request.user.username)
     
+
 
 
 class Profile(LoginRequiredMixin, DetailView):
@@ -203,3 +216,9 @@ class Profile(LoginRequiredMixin, DetailView):
     slug_field = "username"
     slug_url_kwarg = "username"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.object
+        created_recipes = Recipe.objects.filter(author=user)
+        context["created_recipes"] = created_recipes
+        return context

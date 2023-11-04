@@ -52,6 +52,7 @@ h1 {
   font-style: italic;
   font-size: 40px;
   margin: 2rem;
+  color: rgb(0, 0, 83);
 }
 
 .like-button {
@@ -146,7 +147,6 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  flex: 1;
   margin: 10px 10px;
   justify-content: space-between; /* Distribute items evenly in a row */
   box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
@@ -158,10 +158,85 @@ h1 {
   color: #fff;
 }
 
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
 .profile-image {
-  width: 200px;
-  height: 200px;
+  margin-left: auto;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 2rem;
+  margin: 1rem;
+  position: relative;
+  transition: opacity 0.5s; /* Add a smooth opacity transition effect */
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.image-wrapper:hover .profile-image {
+  opacity: 0.6; /* Reduce opacity on hover */
+}
+
+.image-wrapper a {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-wrapper:hover a {
+  opacity: 1;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container a {
+  font-size: 14px;
+  text-align: center;
+  color: rgb(19, 19, 151);
+  font-weight: bold;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  color: rgb(0, 0, 83);
+}
+
+.recipe-container p {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.recipe-contents {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 666px) {
+  .recipe-contents {
+    flex-direction: column;
+  }
+  .recipe-container {
+    max-width: 339px;
+    margin: auto;
+  }
 }
