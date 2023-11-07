@@ -1,13 +1,13 @@
 import base64
-import logging
+
 from io import BytesIO
-from typing import Any
+
 
 import matplotlib
 import matplotlib.pyplot as plt
 from django.contrib import messages
 from django.db.models import Q
-from django.http import HttpRequest, HttpResponse, JsonResponse
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import CreateView, DetailView, ListView
 
@@ -16,7 +16,6 @@ from .models import CustomUser, Recipe
 matplotlib.use("Agg")
 import random
 
-import pandas as pd
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -30,8 +29,10 @@ class HomeView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         all_recipes = Recipe.objects.all()
-        random_recipes = random.sample(list(all_recipes), 5)
-
+        if len(all_recipes) >= 5:
+            random_recipes = random.sample(list(all_recipes), 5)
+        else:
+            random_recipes = list(all_recipes)
         context["random_suggestions"] = random_recipes
         return context
 

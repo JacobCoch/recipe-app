@@ -1,13 +1,14 @@
 from django.test import TestCase
-
-from .models import Recipe
+from django.urls import reverse
+from .models import Recipe, CustomUser
 
 
 # Create your tests here.
 class RecipeModelTest(TestCase):
     def setUpTestData():
+        CustomUser.objects.create(id=1, username="testuser", password="testpass")
         Recipe.objects.create(
-            name="Pasta", ingredients="flour, water, salt, eggs", cooking_time=10
+            name="Pasta", ingredients="flour, water, salt, eggs", cooking_time=10, author_id=1
         )
 
     def test_name_label(self):
@@ -57,3 +58,65 @@ class RecipeModelTest(TestCase):
         recipe.save()
         self.assertEquals(recipe.name, "Pancakes")
         self.assertEquals(recipe.ingredients, "Flour, Milk, Eggs, Sugar")
+
+    def test_get_absolute_url(self):
+        recipe = Recipe.objects.get(id=1)
+        expected_url = reverse("recipes:detail", kwargs={"pk": 1})
+        self.assertEquals(recipe.get_absolute_url(), expected_url)
+
+    def test_fav_recipes_field(self):
+        recipe = Recipe.objects.get(id=1)
+        user = CustomUser.objects.get(id=1)
+        user.fav_recipes.add(recipe)
+        self.assertEquals(user.fav_recipes.count(), 1)
+
+    def test_calc_difficulty(self):
+        # This test checks the calc_difficulty method of the Recipe model.
+
+        easy_recipe = Recipe.objects.create(
+            name="Easy Recipe", ingredients="ingr, ingr, ingr", cooking_time=5, author_id=1
+        )
+        medium_recipe = Recipe.objects.create(
+            name="Medium Recipe",
+            ingredients="ingr, ingr, ingr, ingr, ingr",
+            cooking_time=5,
+            author_id=1
+        )
+        intermediate_recipe = Recipe.objects.create(
+            name="Intermediate Recipe", ingredients="ingr, ingr, ingr", cooking_time=10, author_id=1
+        )
+        hard_recipe = Recipe.objects.create(
+            name="Hard Recipe", ingredients="ingr, ingr, ingr, ingr", cooking_time=10, author_id=1
+        )
+
+        self.assertEqual(easy_recipe.calc_difficulty(), "Easy")
+        self.assertEqual(medium_recipe.calc_difficulty(), "Medium")
+        self.assertEqual(intermediate_recipe.calc_difficulty(), "Intermediate")
+        self.assertEqual(hard_recipe.calc_difficulty(), "Hard")
+
+
+class CustomUserModelTest(TestCase):
+    def setUp(self):
+        self.user = CustomUser.objects.create_user(
+            username="testuser", password="testpass"
+        )
+
+    def test_user_creation(self):
+        self.assertTrue(self.user.check_password("testpass"))
+
+    def test_user_str(self):
+        self.assertEqual(str(self.user), "testuser")
+
+    def test_user_get_absolute_url(self):
+        expected_url = reverse("recipes:profile", kwargs={"username": self.user.username})
+        self.assertEqual(self.user.get_absolute_url(), expected_url)
+
+    def test_user_bio_field(self):
+        self.user.bio = "this is a test bio"
+        self.assertEqual(self.user.bio, "this is a test bio")
+
+    def test_user_pic_field(self):
+        self.user.pic = "profile_pics/test.jpg"
+        self.assertEqual(self.user.pic, "profile_pics/test.jpg")    
+
+    
