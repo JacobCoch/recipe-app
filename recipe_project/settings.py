@@ -75,7 +75,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['shrouded-forest-61463.herokuapp.com/']
+ALLOWED_HOSTS = ['shrouded-forest-61463.herokuapp.com']
 
 
 # Application definition
