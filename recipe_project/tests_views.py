@@ -1,5 +1,6 @@
-from django.test import TestCase, Client
+from django.test import Client, TestCase
 from django.urls import reverse
+
 from recipes.models import CustomUser as User
 
 
@@ -21,7 +22,8 @@ class LoginViewTestCase(TestCase):
         )
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Oops, something went wrong.")
-  
+
+
 class SignupViewTestCase(TestCase):
     def setUp(self):
         self.client = Client()

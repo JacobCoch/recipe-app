@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.urls import reverse
-from .models import Recipe, CustomUser
+
+from .models import CustomUser, Recipe
 
 
 # Create your tests here.
@@ -8,7 +9,10 @@ class RecipeModelTest(TestCase):
     def setUpTestData():
         CustomUser.objects.create(id=1, username="testuser", password="testpass")
         Recipe.objects.create(
-            name="Pasta", ingredients="flour, water, salt, eggs", cooking_time=10, author_id=1
+            name="Pasta",
+            ingredients="flour, water, salt, eggs",
+            cooking_time=10,
+            author_id=1,
         )
 
     def test_name_label(self):
@@ -74,19 +78,28 @@ class RecipeModelTest(TestCase):
         # This test checks the calc_difficulty method of the Recipe model.
 
         easy_recipe = Recipe.objects.create(
-            name="Easy Recipe", ingredients="ingr, ingr, ingr", cooking_time=5, author_id=1
+            name="Easy Recipe",
+            ingredients="ingr, ingr, ingr",
+            cooking_time=5,
+            author_id=1,
         )
         medium_recipe = Recipe.objects.create(
             name="Medium Recipe",
             ingredients="ingr, ingr, ingr, ingr, ingr",
             cooking_time=5,
-            author_id=1
+            author_id=1,
         )
         intermediate_recipe = Recipe.objects.create(
-            name="Intermediate Recipe", ingredients="ingr, ingr, ingr", cooking_time=10, author_id=1
+            name="Intermediate Recipe",
+            ingredients="ingr, ingr, ingr",
+            cooking_time=10,
+            author_id=1,
         )
         hard_recipe = Recipe.objects.create(
-            name="Hard Recipe", ingredients="ingr, ingr, ingr, ingr", cooking_time=10, author_id=1
+            name="Hard Recipe",
+            ingredients="ingr, ingr, ingr, ingr",
+            cooking_time=10,
+            author_id=1,
         )
 
         self.assertEqual(easy_recipe.calc_difficulty(), "Easy")
@@ -108,7 +121,9 @@ class CustomUserModelTest(TestCase):
         self.assertEqual(str(self.user), "testuser")
 
     def test_user_get_absolute_url(self):
-        expected_url = reverse("recipes:profile", kwargs={"username": self.user.username})
+        expected_url = reverse(
+            "recipes:profile", kwargs={"username": self.user.username}
+        )
         self.assertEqual(self.user.get_absolute_url(), expected_url)
 
     def test_user_bio_field(self):
@@ -117,6 +132,4 @@ class CustomUserModelTest(TestCase):
 
     def test_user_pic_field(self):
         self.user.pic = "profile_pics/test.jpg"
-        self.assertEqual(self.user.pic, "profile_pics/test.jpg")    
-
-    
+        self.assertEqual(self.user.pic, "profile_pics/test.jpg")
