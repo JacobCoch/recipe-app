@@ -16,7 +16,7 @@ import os
 AUTH_USER_MODEL = "recipes.CustomUser"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LOGGING_DIR = "/code/logs/A2_Recipe_App"  # Define a directory for log files
+LOGGING_DIR = os.path.join(BASE_DIR, 'logs')  # A relative path within your app's directory
 
 if not os.path.exists(LOGGING_DIR):
     os.makedirs(LOGGING_DIR)
