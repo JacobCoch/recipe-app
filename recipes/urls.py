@@ -7,7 +7,6 @@ from .views import (AddRecipe, HomeView, Profile, RecipeDetailView,
 app_name = "recipes"
 
 urlpatterns = [
-
     path("home/", HomeView.as_view(), name="home"),
     path("recipe/", RecipeListView.as_view(), name="recipe"),
     path("recipe/<int:pk>/", RecipeDetailView.as_view(), name="detail"),
@@ -16,4 +15,9 @@ urlpatterns = [
     path("recipe/<int:recipe_id>/edit/", views.edit_recipe, name="edit_recipe"),
     path("recipe/fav/<int:recipe_id>/", views.faved_recipe, name="faved_recipe"),
     path("profile/<slug:username>/", Profile.as_view(), name="profile"),
+    path(
+        "profile/<slug:username>/update/",
+        views.update_profile_picture,
+        name="update_profile_picture",
+    ),
 ]

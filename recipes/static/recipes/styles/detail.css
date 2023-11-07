@@ -117,3 +117,55 @@ body {
   font-weight: bold;
   margin-top: 0;
 }
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  width: 100%; /* Use 100% width */
+  max-width: 80%; /* Adjust the maximum width as needed */
+  margin: 10rem auto; /* Center horizontally */
+  padding: 1em; /* Add padding to create some spacing around the content */
+}
+
+.modal-content button {
+  margin: 0.5em;
+}
+
+.edit-recipe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  gap: 1rem;
+}
+.body-and-form-container {
+  display: flex;
+  margin: 1rem;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.edit-recipe-form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.edit-recipe-form button[type='submit'] {
+  padding: 0.5rem 1rem;
+  background-color: #007bff; /* Change to your preferred button background color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 131px;
+}
+
+.edit-recipe-form button[type='submit']:hover {
+  background-color: #0056b3; /* Change to the hover color you prefer */
+}

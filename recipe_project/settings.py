@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 
-AUTH_USER_MODEL = 'recipes.CustomUser'
+AUTH_USER_MODEL = "recipes.CustomUser"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOGGING_DIR = "/code/logs/A2_Recipe_App"  # Define a directory for log files
@@ -49,6 +49,8 @@ LOGGING = {
 from pathlib import Path
 
 SECRET_KEY = "django-insecure-h*lvn1*wwi6i&ek=pgw14e(ec7v-=73c13et7(g)*^&iwx#7@&"
+
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",

@@ -85,54 +85,127 @@
       </div>
     </nav>
     <div>
-      <h1>Hello, {{user}}</h1>
-      {% if user.pic %}
-      <img
-        src="{{ request.user.pic.url }}"
-        alt="Profile Picture"
-        class="profile-image"
-      />
-      {% else %}
-      <p>No profile picture available.</p>
-      {% endif %}
-      <p>{{user.bio}}</p>
-      <ul>
-        <div class="recipe-container">
-          {% for recipe in user.fav_recipes.all %}
+      <div class="profile-header">
+        <header>
+          <h1>Hello, {{user|title}}</h1>
+          <p>Bio: {{user.bio}}</p>
+        </header>
 
-          <div class="recipe">
-            <img src="{{recipe.pic.url}}" width="100" height="100" />
-            <h3>{{ recipe.name }}</h3>
-            <p>{{ recipe.difficulty }}</p>
-            <div class="recipe-buttons">
-              <button
-                class="details-button"
-                id="details-button"
-                data-recipe-url="{% url 'recipes:detail' recipe.pk %}"
-              >
-                Details
-              </button>
-
-              <form id="recipe-fav-form">
-                {% csrf_token %}
-                <button
-                  class="btn like-button"
-                  data-recipe-id="{{ recipe.id }}"
-                >
-                  {% if recipe in user.fav_recipes.all %}
-                  <i class="fas fa-heart"></i>
-                  {% else %}
-                  <i class="far fa-heart"></i>
-                  {% endif %}
-                </button>
-              </form>
-            </div>
+        <div class="image-container">
+          {% if user.pic %}
+          <div class="image-wrapper">
+            <img
+              src="{{ request.user.pic.url }}"
+              alt="Profile Picture"
+              class="profile-image"
+            />
+            <a href="#" id="update-profile-picture" class="update-link"
+              >Update Picture</a
+            >
           </div>
 
-          {% endfor %}
+          <form
+            method="post"
+            enctype="multipart/form-data"
+            id="profile-picture-form"
+            action="{% url 'recipes:update_profile_picture' username=request.user.username %}"
+          >
+            {% csrf_token %}
+            <input
+              type="file"
+              name="profile_pic"
+              accept="image/*"
+              style="display: none"
+              id="file-input"
+            />
+          </form>
+          {% else %}
+          <p>No profile picture available.</p>
+          {% endif %}
         </div>
-      </ul>
+      </div>
+      <container class="recipe-contents container-md m-auto">
+        <div>
+          <h2>My Created Recipes</h2>
+          <div class="recipe-container">
+            {% if created_recipes|length == 0 %}
+            <p>No recipes found</p>
+            {% endif %} {% for recipe in created_recipes %}
+            <div class="recipe">
+              <img src="{{ recipe.pic.url }}" width="100" height="100" />
+              <h3>{{ recipe.name }}</h3>
+              <p>{{ recipe.difficulty }}</p>
+              <div class="recipe-buttons">
+                <button
+                  class="details-button"
+                  data-recipe-url="{% url 'recipes:detail' recipe.pk %}"
+                >
+                  Details
+                </button>
+
+                <form>
+                  {% csrf_token %}
+                  <button
+                    class="btn like-button"
+                    data-recipe-id="{{ recipe.id }}"
+                  >
+                    {% if recipe in user.fav_recipes.all %}
+                    <i class="fas fa-heart"></i>
+                    {% else %}
+                    <i class="far fa-heart"></i>
+                    {% endif %}
+                  </button>
+                </form>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div>
+          <h2>My Favorite Recipes</h2>
+          <div class="recipe-container">
+            {% if user.fav_recipes.all.count == 0 %}
+            <p>No recipes found</p>
+            {% else %} {% for recipe in user.fav_recipes.all %}
+
+            <div class="recipe">
+              <img src="{{recipe.pic.url}}" width="100" height="100" />
+              <h3>{{ recipe.name }}</h3>
+              <p>{{ recipe.difficulty }}</p>
+              <div class="recipe-buttons">
+                <button
+                  class="details-button"
+                  id="details-button"
+                  data-recipe-url="{% url 'recipes:detail' recipe.pk %}"
+                >
+                  Details
+                </button>
+
+                <form id="recipe-fav-form">
+                  {% csrf_token %}
+                  <button
+                    class="btn like-button"
+                    data-recipe-id="{{ recipe.id }}"
+                  >
+                    {% if recipe in user.fav_recipes.all %}
+                    <i class="fas fa-heart"></i>
+                    {% else %}
+                    <i class="far fa-heart"></i>
+                    {% endif %}
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            {% endfor %} {% endif %}
+          </div>
+        </div>
+      </container>
     </div>
   </body>
+  <script
+    src="https://kit.fontawesome.com/10833f84d9.js"
+    crossorigin="anonymous"
+  ></script>
   <script src="{% static 'scripts/profile.js' %}" defer></script>
 </html>

@@ -1,21 +1,21 @@
 import base64
+
 from io import BytesIO
-from typing import Any
+
 
 import matplotlib
 import matplotlib.pyplot as plt
 from django.contrib import messages
-from django.contrib.auth.models import User
 from django.db.models import Q
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import CreateView, DetailView, ListView
-from django.http import JsonResponse
-from .models import Recipe, CustomUser
+
+from .models import CustomUser, Recipe
 
 matplotlib.use("Agg")
 import random
 
-import pandas as pd
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -29,8 +29,10 @@ class HomeView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         all_recipes = Recipe.objects.all()
-        random_recipes = random.sample(list(all_recipes), 5)
-
+        if len(all_recipes) >= 5:
+            random_recipes = random.sample(list(all_recipes), 5)
+        else:
+            random_recipes = list(all_recipes)
         context["random_suggestions"] = random_recipes
         return context
 
@@ -144,22 +146,16 @@ def delete_recipe(request, recipe_id):
     if request.user == recipe.author:
         if request.method == "POST":
             # Check for a confirmation parameter sent via POST
-            confirmation = request.POST.get("confirmation")
-
-            if confirmation == "yes":
-                # User has confirmed the deletion
+            if request.POST:
                 recipe.delete()
-                messages.success(request, "Recipe deleted successfully.")
                 return redirect("recipes:recipe")
             else:
-                # User canceled the deletion
-                messages.info(request, "Recipe deletion canceled.")
-                return redirect("recipes:recipe")
+                return redirect("recipes:detail", pk=recipe_id)
     return redirect("recipes:recipe")
 
 
 @login_required
-def edit_recipe(request,recipe_id):
+def edit_recipe(request, recipe_id):
     recipe = get_object_or_404(Recipe, pk=recipe_id)
 
     if request.user == recipe.author:
@@ -168,8 +164,7 @@ def edit_recipe(request,recipe_id):
             if recipe_form.is_valid():
                 recipe_form.save()
                 return redirect("recipes:detail", pk=recipe_id)
-    else:
-        pass
+
     return redirect("recipes:detail", pk=recipe_id)
 
 
@@ -178,7 +173,6 @@ def faved_recipe(request, recipe_id):
     user = request.user
     recipe = get_object_or_404(Recipe, pk=recipe_id)
 
-
     if user.fav_recipes.filter(pk=recipe_id).exists():
         user.fav_recipes.remove(recipe)
         is_liked = False
@@ -186,14 +180,23 @@ def faved_recipe(request, recipe_id):
         user.fav_recipes.add(recipe)
         is_liked = True
 
-
     response_data = {
         "is_liked": is_liked,
     }
-    
+
     return JsonResponse(response_data)
-   
-    
+
+
+@login_required
+def update_profile_picture(request, username):
+    if request.method == "POST":
+        profile_pic = request.FILES["profile_pic"]
+        request.user.pic = profile_pic
+        request.user.save()
+        print(request.FILES)
+        return redirect("recipes:profile", username=request.user.username)
+    else:
+        return redirect("recipes:profile", username=request.user.username)
 
 
 class Profile(LoginRequiredMixin, DetailView):
@@ -203,3 +206,9 @@ class Profile(LoginRequiredMixin, DetailView):
     slug_field = "username"
     slug_url_kwarg = "username"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        user = self.object
+        created_recipes = Recipe.objects.filter(author=user)
+        context["created_recipes"] = created_recipes
+        return context
