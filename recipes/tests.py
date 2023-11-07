@@ -70,6 +70,30 @@ class RecipeModelTest(TestCase):
         user.fav_recipes.add(recipe)
         self.assertEquals(user.fav_recipes.count(), 1)
 
+    def test_calc_difficulty(self):
+        # This test checks the calc_difficulty method of the Recipe model.
+
+        easy_recipe = Recipe.objects.create(
+            name="Easy Recipe", ingredients="ingr, ingr, ingr", cooking_time=5, author_id=1
+        )
+        medium_recipe = Recipe.objects.create(
+            name="Medium Recipe",
+            ingredients="ingr, ingr, ingr, ingr, ingr",
+            cooking_time=5,
+            author_id=1
+        )
+        intermediate_recipe = Recipe.objects.create(
+            name="Intermediate Recipe", ingredients="ingr, ingr, ingr", cooking_time=10, author_id=1
+        )
+        hard_recipe = Recipe.objects.create(
+            name="Hard Recipe", ingredients="ingr, ingr, ingr, ingr", cooking_time=10, author_id=1
+        )
+
+        self.assertEqual(easy_recipe.calc_difficulty(), "Easy")
+        self.assertEqual(medium_recipe.calc_difficulty(), "Medium")
+        self.assertEqual(intermediate_recipe.calc_difficulty(), "Intermediate")
+        self.assertEqual(hard_recipe.calc_difficulty(), "Hard")
+
 
 class CustomUserModelTest(TestCase):
     def setUp(self):

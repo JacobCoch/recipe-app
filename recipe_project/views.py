@@ -29,6 +29,7 @@ def login_view(request):
                 return redirect("recipes:home")
             else:
                 error_message = "Oops, something went wrong."
+                
 
     context = {
         "form": form,
@@ -56,6 +57,7 @@ def signup(request):
 
         else:
             error_message = "Oops, something went wrong during signup."
+            
 
     context = {
         "form": form,
