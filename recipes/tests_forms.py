@@ -1,4 +1,5 @@
 from django.test import TestCase
+
 from .forms import RecipeForm, RecipeSearchForm
 from .models import CustomUser as User
 
