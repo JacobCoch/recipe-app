@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 
 import os
+
 import django_heroku
 
 AUTH_USER_MODEL = "recipes.CustomUser"
@@ -51,17 +52,6 @@ from pathlib import Path
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-ml49cp(e)=yakpevh4xz)3w)6xuq6kv7g&3^xf^)gr-n3&p#%9')
 
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "recipe-app",
-        "USER": "postgres",
-        "PASSWORD": "Malparidoguason22$",
-        "HOST": "localhost",
-        "PORT": "",
-    }
-}
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -160,6 +150,30 @@ USE_I18N = True
 USE_TZ = True
 
 
+
+# Use Amazon S3 for storage for uploaded media files.
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# Amazon S3 settings.
+AWS_ACCESS_KEY_ID = 'AKIAR4OT7DZSNOEETHWR'
+AWS_SECRET_ACCESS_KEY = 'eAOIuKk1fd1SYc7G2EzbSm3Mzpr/fmMs+mlezK/F'
+AWS_STORAGE_BUCKET_NAME = 'my-django-app-media'
+AWS_S3_REGION_NAME = 'us-east-1'  # e.g., 'us-east-1'
+
+# Optionally, set a custom domain for the files (e.g., CloudFront distribution).
+# AWS_S3_CUSTOM_DOMAIN = 'your-cloudfront-url'
+
+# ...
+
+# Static files (CSS, JavaScript, images)
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',  # Cache media files for 24 hours
+}
+
+# Media files (uploads)
+MEDIA_URL = 'https://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
@@ -173,7 +187,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "src", "media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -183,6 +197,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 LOGIN_URL = "/login/"
 
 import dj_database_url
+
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
