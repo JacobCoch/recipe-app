@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+}
+.logo {
+  width: 200px;
+}
+.logout {
+  margin-left: auto;
+  padding-right: 2rem;
+}
+
+.dropdown {
+  display: none; /* Hide the dropdown by default */
+}
+#dropdownMenuButton .dropdown-menu {
+  width: 200px !important;
+}
+
+.custom-button-with-svg {
+  width: 40px;
+  height: 40px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>')
+    no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 516px) {
+  .logo {
+    width: 170px;
+  }
+  .nav-link {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+    margin-right: 1rem;
+  }
+}
+
+.add-recipe-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #333; /* Change text color to a darker shade */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px; /* Add padding to the container for spacing */
+}
+
+.form-group {
+  margin: 10px 0; /* Add margin to space out form groups */
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555; /* Change label text color to a slightly lighter shade */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc; /* Add a light border around form inputs */
+  border-radius: 3px;
+  box-shadow: none;
+  background-color: #f9f9f9; /* Use a slightly off-white background color */
+}
+
+/* Style the Ingredients title */
+.recipe-content h2 {
+  margin: 15px 0;
+  font-size: 18px;
+  text-align: center;
+  color: #555; /* Change text color to a slightly lighter shade */
+}
+
+.button-content {
+  display: flex;
+  width: 100px;
+  justify-content: center;
+  padding-left: 2rem;
+}
+
+.button-content button {
+  display: block;
+  margin: 15px 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-content button:hover {
+  background-color: #0056b3;
+}
