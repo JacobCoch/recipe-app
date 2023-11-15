@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 
 import os
+import django_heroku
 
 AUTH_USER_MODEL = "recipes.CustomUser"
 
@@ -184,3 +185,5 @@ LOGIN_URL = "/login/"
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+django_heroku.settings(locals())
