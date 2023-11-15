@@ -53,6 +53,17 @@ from pathlib import Path
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-ml49cp(e)=yakpevh4xz)3w)6xuq6kv7g&3^xf^)gr-n3&p#%9')
 
 
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "recipe-app",
+        "USER": "postgres",
+        "PASSWORD": "Malparidoguason22$",
+        "HOST": "localhost",
+        "PORT": "",
+    }
+}
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -155,8 +166,8 @@ USE_TZ = True
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Amazon S3 settings.
-AWS_ACCESS_KEY_ID = 'AKIAR4OT7DZSNOEETHWR'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
 AWS_STORAGE_BUCKET_NAME = 'my-django-app-media'
 AWS_S3_REGION_NAME = 'us-east-1'  # e.g., 'us-east-1'
 
