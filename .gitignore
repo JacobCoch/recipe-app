@@ -8,4 +8,4 @@ config.py
 *.log
 
 # settings.py 
-settings.py
+*.settings.py
