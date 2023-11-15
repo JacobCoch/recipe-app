@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   const imageSources = [
-    '/media/recipes/brownies.jpg',
-    '/media/recipes/cherry_pancakes.jpg',
-    '/media/recipes/fruit_cookies.jpg',
-    '/media/recipes/strawberry_cake.jpg',
+    '/recipes/images/brownies.jpg',
+    '/recipes/images/cherry_pancakes.jpg',
+    '/recipes/images/fruit_cookies.jpg',
+    '/recipes/images/strawberry_cake.jpg',
     // Add more image paths as needed
   ];
 
