@@ -1,7 +1,7 @@
 # MyRecipe Django App Readme
 
-🍲 Welcome to the documentation for the **MyRecipe** Django app! This project is a culmination of two months of dedicated effort to create a robust recipe app using Django, a high-level Python web framework.
-
+🍲 Welcome to the documentation for the Tastebuds Django app!
+ [Deployed Site]([#](https://shrouded-forest-61463-f52cd1412c70.herokuapp.com/)
 ## Table of Contents
 
 - [MyRecipe Django App Readme](#myrecipe-django-app-readme)
@@ -15,11 +15,11 @@
 
 ## Objective 🚀
 
-The primary objective of the MyRecipe project is to develop a feature-rich recipe application using Django. This involves creating a dynamic web application that allows users to browse, add, and modify recipes. The project's focus is on mastering Django's capabilities, exploring database interactions, and enhancing my proficiency in web development with Python.
+The primary objective of the Tastebuds project is to develop a feature-rich recipe application using Django. This involves creating a dynamic web application that allows users to browse, add, and modify recipes. The project's focus is on mastering Django's capabilities, exploring database interactions, and enhancing my proficiency in web development with Python.
 
 ## Context 🌍
 
-Embark on a culinary journey with the MyRecipe Django app—a testament to my exploration and mastery of Django's capabilities. By leveraging Django's powerful features, I've crafted a responsive web application that seamlessly integrates with a backend database to provide users with a delightful recipe-sharing experience. This project has been an immersive learning experience, enabling me to deepen my understanding of Django's MVC architecture, ORM, and templating system. 🍲
+Embark on a culinary journey with the Tastebuds Django app, a testament to my exploration and mastery of Django's capabilities. By leveraging Django's powerful features, I've crafted a responsive web application that seamlessly integrates with a backend database to provide users with a delightful recipe-sharing experience. This project has been an immersive learning experience, enabling me to deepen my understanding of Django's MVT architecture, ORM, and templating system. 🍲
 
 ## Design Criteria 🎨
 
@@ -27,7 +27,7 @@ In developing the MyRecipe Django app, I focused on creating an intuitive and vi
 
 ## Key Features 🍽️🔑
 
-The MyRecipe Django app boasts a range of key features that elevate the user experience:
+The Tastebuds Django app boasts a range of key features that elevate the user experience:
 
 - **Recipe Catalog:** Users can explore a comprehensive catalog of recipes, each featuring detailed information such as ingredients, instructions, and preparation time.
 - **User Accounts:** A user-friendly authentication system allows users to create accounts, log in, and personalize their recipe collection.
@@ -50,9 +50,9 @@ The development of the MyRecipe Django app involved the use of the following tec
 The development of the MyRecipe Django app provided valuable insights into several technologies and methodologies:
 
 - **Django Templates:** Explored and utilized to create dynamic and data-driven HTML templates, facilitating seamless integration of backend and frontend.
-- **Model-View-Controller (MVC) Architecture:** Deepened understanding of MVC principles within the context of Django, enhancing code organization and maintainability.
+- **Model-View-Template Architecture:** Deepened understanding of MVT principles within the context of Django, enhancing code organization and maintainability.
 - **User Authentication:** Implemented Django's built-in authentication system to manage user accounts and enhance security.
 - **Forms and Validation:** Leveraged Django forms to simplify user input, ensuring data integrity and reliability.
 - **Django Admin Interface:** Explored the powerful admin interface for managing database records and application data.
 
-Thank you for joining me on this exciting journey of building the MyRecipe Django app! If you have any questions or need assistance, feel free to reach out. Happy coding! 🚀
+Thank you for joining me on this exciting journey of building the Tastebuds Django app! If you have any questions or need assistance, feel free to reach out. Happy coding! 🚀
