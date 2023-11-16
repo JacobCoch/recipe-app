@@ -1,7 +1,7 @@
 # MyRecipe Django App Readme
 
-🍲 Welcome to the documentation for the Tastebuds Django app!
- [Deployed Site]([#](https://shrouded-forest-61463-f52cd1412c70.herokuapp.com/)
+🍲 Welcome to the documentation for the Tastebuds Django app! 
+ [Deployed Site](https://shrouded-forest-61463-f52cd1412c70.herokuapp.com/)
 ## Table of Contents
 
 - [MyRecipe Django App Readme](#myrecipe-django-app-readme)
