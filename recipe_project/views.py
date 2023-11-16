@@ -1,12 +1,15 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
-
+from django.conf import settings
 from .forms import LoginForm, SignUpForm
 
 
 def success(request):
     logout(request)  # the use pre-defined Django function to logout
-    return render(request, "auth/success.html")
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(request, "auth/success.html", context)
 
 
 # define a function view called login_view that takes a request from user
