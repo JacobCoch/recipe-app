@@ -3,6 +3,7 @@ from io import BytesIO
 
 import matplotlib
 import matplotlib.pyplot as plt
+from django.conf import settings
 from django.contrib import messages
 from django.db.models import Q
 from django.http import JsonResponse
@@ -32,6 +33,7 @@ class HomeView(LoginRequiredMixin, ListView):
         else:
             random_recipes = list(all_recipes)
         context["random_suggestions"] = random_recipes
+        context["MEDIA_URL"] = settings.MEDIA_URL
         return context
 
 
@@ -44,6 +46,7 @@ class RecipeDetailView(LoginRequiredMixin, DetailView):
         recipe = self.object
         difficulty = recipe.calc_difficulty()
         context["difficulty"] = difficulty
+        context["MEDIA_URL"] = settings.MEDIA_URL
         return context
 
 
@@ -62,6 +65,7 @@ class RecipeListView(ListView):
         y = [recipe.cooking_time for recipe in all_recipes]
         chart = self.get_plot(x, y)
         context["chart"] = chart
+        context["MEDIA_URL"] = settings.MEDIA_URL
 
         return context
 
@@ -133,7 +137,7 @@ class AddRecipe(LoginRequiredMixin, CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
+        context["MEDIA_URL"] = settings.MEDIA_URL
         return context
 
 
@@ -209,4 +213,5 @@ class Profile(LoginRequiredMixin, DetailView):
         user = self.object
         created_recipes = Recipe.objects.filter(author=user)
         context["created_recipes"] = created_recipes
+        context["MEDIA_URL"] = settings.MEDIA_URL
         return context

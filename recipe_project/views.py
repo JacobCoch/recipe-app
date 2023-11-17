@@ -61,11 +61,12 @@ def signup(request):
 
         else:
             error_message = "Oops, something went wrong during signup."
-
+                
     context = {
         "form": form,
         "error_message": error_message,
         "success_message": success_message,
         'MEDIA_URL': settings.MEDIA_URL,
     }
+    
     return render(request, "auth/signup.html", context)

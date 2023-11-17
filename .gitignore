@@ -7,6 +7,3 @@ config.py
 # log files
 *.log
 
-
-# aws credentials
-aws_credentials.py
