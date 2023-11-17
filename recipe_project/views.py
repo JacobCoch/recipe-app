@@ -37,6 +37,8 @@ def login_view(request):
         "form": form,
         "error_message": error_message,
         "success_message": success_message,
+        'MEDIA_URL': settings.MEDIA_URL,
+
     }
     return render(request, "auth/login.html", context)
 
@@ -64,5 +66,6 @@ def signup(request):
         "form": form,
         "error_message": error_message,
         "success_message": success_message,
+        'MEDIA_URL': settings.MEDIA_URL,
     }
     return render(request, "auth/signup.html", context)
