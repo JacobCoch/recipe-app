@@ -14,7 +14,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 
 import django_heroku
-from aws_credentials import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 AUTH_USER_MODEL = "recipes.CustomUser"
 
@@ -174,8 +173,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'django-recipe-app-storage'
 AWS_S3_REGION_NAME = 'us-east-1'  # e.g., 'us-east-1'
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
