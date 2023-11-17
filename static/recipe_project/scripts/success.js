@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const contentContainer = document.getElementById('content-container');
   const nextButton = document.getElementById('next-button');
   const headingElement = document.getElementById('heading');
+  const brownies =
+    'https://django-recipe-app-storage.s3.amazonaws.com/media/recipes/brownies.jpg';
+  const pancakes =
+    'https://django-recipe-app-storage.s3.amazonaws.com/media/recipes/cherry_pancakes.jpg';
+  const cookies =
+    'https://django-recipe-app-storage.s3.amazonaws.com/media/recipes/fruit_cookies.jpg';
+  const cake =
+    'https://django-recipe-app-storage.s3.amazonaws.com/recipes/strawberry_cake.jpg';
 
   // Define arrays for headings, messages, and image sources
   const headings = [
@@ -22,10 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   const imageSources = [
-    '/media/recipes/brownies.jpg',
-    '/media/recipes/cherry_pancakes.jpg',
-    '/media/recipes/fruit_cookies.jpg',
-    '/media/recipes/strawberry_cake.jpg',
+    brownies,
+    pancakes,
+    cookies,
+    cake,
     // Add more image paths as needed
   ];
 
