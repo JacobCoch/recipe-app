@@ -13,6 +13,8 @@ body {
 .logout {
   margin-left: auto;
   padding-right: 2rem;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown {
@@ -239,4 +241,16 @@ h2 {
     max-width: 339px;
     margin: auto;
   }
+}
+
+.developer-icon {
+  margin-left: 1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.developer {
+  margin-left: auto;
+  margin-right: 30px;
 }

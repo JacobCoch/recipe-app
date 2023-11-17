@@ -13,6 +13,9 @@ body {
 .logout {
   margin-left: auto;
   padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .box-content {
