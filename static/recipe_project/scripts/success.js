@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const nextButton = document.getElementById('next-button');
   const headingElement = document.getElementById('heading');
   const brownies =
-    'https://django-recipe-app-storage.s3.amazonaws.com/media/recipes/brownies.jpg';
+    'https://django-recipe-app-storage.s3.amazonaws.com/recipes/brownies.jpg';
   const pancakes =
-    'https://django-recipe-app-storage.s3.amazonaws.com/media/recipes/cherry_pancakes.jpg';
+    'https://django-recipe-app-storage.s3.amazonaws.com/recipes/cherry_pancakes.jpg';
   const cookies =
-    'https://django-recipe-app-storage.s3.amazonaws.com/media/recipes/fruit_cookies.jpg';
+    'https://django-recipe-app-storage.s3.amazonaws.com/recipes/fruit_cookies.jpg';
   const cake =
     'https://django-recipe-app-storage.s3.amazonaws.com/recipes/strawberry_cake.jpg';
 
