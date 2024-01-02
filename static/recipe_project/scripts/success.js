@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const nextButton = document.getElementById('next-button');
   const headingElement = document.getElementById('heading');
   const brownies =
-    'https://django-recipe-app-storage.s3.amazonaws.com/recipes/brownies.jpg';
+    'https://python-recipe-app.s3.us-west-1.amazonaws.com/recipes/brownies.jpg';
   const pancakes =
-    'https://django-recipe-app-storage.s3.amazonaws.com/recipes/cherry_pancakes.jpg';
+    'https://python-recipe-app.s3.us-west-1.amazonaws.com/recipes/cherry_pancakes.jpg';
   const cookies =
-    'https://django-recipe-app-storage.s3.amazonaws.com/recipes/fruit_cookies.jpg';
+    'https://python-recipe-app.s3.us-west-1.amazonaws.com/recipes/fruit_cookies.jpg';
   const cake =
-    'https://django-recipe-app-storage.s3.amazonaws.com/recipes/strawberry_cake.jpg';
+    'https://python-recipe-app.s3.us-west-1.amazonaws.com/recipes/strawberry_cake.jpg';
 
   // Define arrays for headings, messages, and image sources
   const headings = [
